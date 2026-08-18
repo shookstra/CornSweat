@@ -1,0 +1,139 @@
+[gd_scene format=4 uid="uid://ccklkm8tjrh04"]
+
+[ext_resource type="Texture2D" uid="uid://yk7mj0knndsr" path="res://assets/models/Textures/grass.png" id="1_lrsfn"]
+[ext_resource type="Texture2D" uid="uid://dhollrs3hpsct" path="res://assets/models/Textures/asphalt.png" id="2_lrsfn"]
+[ext_resource type="PackedScene" uid="uid://dbnch3sjmtrvf" path="res://assets/models/road-asphalt-corner-inner.fbx" id="3_5qpkl"]
+[ext_resource type="PackedScene" uid="uid://skfncaiebl11" path="res://assets/models/road-asphalt-corner-outer.fbx" id="4_275it"]
+[ext_resource type="PackedScene" uid="uid://cjscaad0a6pgh" path="res://assets/models/road-asphalt-corner.fbx" id="5_ho12l"]
+[ext_resource type="PackedScene" uid="uid://b5mhrofhq31dy" path="res://assets/models/road-asphalt-damaged.fbx" id="6_soo1d"]
+[ext_resource type="PackedScene" uid="uid://d4b46x0ubktfr" path="res://assets/models/road-asphalt-pavement.fbx" id="7_bxksm"]
+[ext_resource type="PackedScene" uid="uid://c44dy47c6axr7" path="res://assets/models/road-asphalt-side.fbx" id="8_sk1mu"]
+[ext_resource type="PackedScene" uid="uid://tbl5bgdj4c3p" path="res://assets/models/road-asphalt-straight.fbx" id="9_15qm8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6q5p"]
+resource_name = "grass"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_lrsfn")
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_72yrp"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1e-05, 1),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMA"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAPwAAAAAAAAA/AAAAvwAAAAAAAAC/AAAAPwAAAAAAAAC/AAAAvwAAAAAAAAA/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o202s"]
+resource_name = "Scene"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1e-05, 1),
+"attribute_data": PackedByteArray("AACAvwAAAAAAAFAmAACAPwAAgL8AAIA/AABQJgAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMA"),
+"material": SubResource("StandardMaterial3D_j6q5p"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAPwAAAAAAAAA/AAAAvwAAAAAAAAC/AAAAPwAAAAAAAAC/AAAAvwAAAAAAAAA//3///wAA/7//f///AAD/v/9///8AAP+//3///wAA/78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_72yrp")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4mmrg"]
+rough = true
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lrsfn"]
+data = PackedVector3Array(0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_stvcv"]
+resource_name = "asphalt"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_lrsfn")
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yjw5w"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1e-05, 1),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMA"),
+"name": "asphalt",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAPwAAAAAAAAA/AAAAvwAAAAAAAAC/AAAAPwAAAAAAAAC/AAAAvwAAAAAAAAA/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_eg4oa"]
+resource_name = "Scene"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1e-05, 1),
+"attribute_data": PackedByteArray("QAa1sgAAAAAAAIC/AACAPwAAgL8AAAAAAAAApQAAgD8="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMA"),
+"material": SubResource("StandardMaterial3D_stvcv"),
+"name": "asphalt",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAPwAAAAAAAAA/AAAAvwAAAAAAAAC/AAAAPwAAAAAAAAC/AAAAvwAAAAAAAAA//3////9//7//f////3//v/9/////f/+//3////9//78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_yjw5w")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5qpkl"]
+data = PackedVector3Array(0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5)
+
+[node name="MeshLibrary" type="Node3D" unique_id=185163388]
+
+[node name="grass2" type="MeshInstance3D" parent="." unique_id=1892697554]
+mesh = SubResource("ArrayMesh_o202s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="grass2" unique_id=1988663408]
+physics_material_override = SubResource("PhysicsMaterial_4mmrg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="grass2/StaticBody3D" unique_id=835603019]
+shape = SubResource("ConcavePolygonShape3D_lrsfn")
+
+[node name="road-asphalt-center" type="Node3D" parent="." unique_id=1798764004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45524597, 0, 1.5585938)
+
+[node name="road-asphalt-center" type="MeshInstance3D" parent="road-asphalt-center" unique_id=661686969]
+mesh = SubResource("ArrayMesh_eg4oa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="road-asphalt-center/road-asphalt-center" unique_id=1514842494]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="road-asphalt-center/road-asphalt-center/StaticBody3D" unique_id=1513430564]
+shape = SubResource("ConcavePolygonShape3D_5qpkl")
+
+[node name="road-asphalt-corner-inner" parent="." unique_id=432707482 instance=ExtResource("3_5qpkl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1628723, 0, -0.1138916)
+
+[node name="road-asphalt-corner-outer" parent="." unique_id=1570727832 instance=ExtResource("4_275it")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0628052, 0, -0.04736328)
+
+[node name="road-asphalt-corner" parent="." unique_id=1807183301 instance=ExtResource("5_ho12l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1628723, 0, 4.3323975)
+
+[node name="road-asphalt-damaged" parent="." unique_id=1674233018 instance=ExtResource("6_soo1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.66679, 0, 1.5585938)
+
+[node name="road-asphalt-pavement" parent="." unique_id=470785068 instance=ExtResource("7_bxksm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.417019, 0, 0.0009765625)
+
+[node name="road-asphalt-side" parent="." unique_id=1542171268 instance=ExtResource("8_sk1mu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.845829, 0, 1.5585938)
+
+[node name="road-asphalt-straight" parent="." unique_id=1975078062 instance=ExtResource("9_15qm8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1628723, 0, 1.5585938)

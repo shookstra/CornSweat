@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Weapon" format=3 uid="uid://bpiuqumyeekfp"]
+
+[ext_resource type="Script" uid="uid://ds8ol5ij3uqbn" path="res://player/weapon_manager/weapon_resource.gd" id="1_ibd8x"]
+
+[resource]
+script = ExtResource("1_ibd8x")
+name = "Pistol"
+metadata/_custom_type_script = "uid://ds8ol5ij3uqbn"
