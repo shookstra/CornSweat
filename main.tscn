@@ -68,7 +68,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4269855, 0)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=563867572]
 
 [node name="CRT" type="ColorRect" parent="CanvasLayer" unique_id=1363359781]
-visible = false
 material = SubResource("ShaderMaterial_1bvp3")
 anchors_preset = 15
 anchor_right = 1.0

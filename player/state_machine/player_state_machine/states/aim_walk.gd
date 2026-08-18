@@ -22,7 +22,7 @@ func _state_input(event: InputEvent) -> void:
 
 func _update(delta: float) -> void:
 	set_direction()
-	calculate_velocity(sprint_speed, direction, PLAYER_MOVEMENT_STATS.acceleration, delta)
+	calculate_velocity(speed, direction, PLAYER_MOVEMENT_STATS.acceleration, delta)
 	replenish_sprint(delta)
 	
 	if direction == Vector3.ZERO:

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dyj55pkq4x5r8"]
+
+[ext_resource type="PackedScene" uid="uid://bx4p5oyyf6hcr" path="res://assets/models/Pistol_1.fbx" id="1_1qnb0"]
+
+[node name="Pistol" type="Node3D" unique_id=1104864930]
+
+[node name="Pistol_1" parent="." unique_id=852091429 instance=ExtResource("1_1qnb0")]
+
+[editable path="Pistol_1"]

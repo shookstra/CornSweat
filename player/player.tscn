@@ -6,9 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://cfwrs8jm8spy6" path="res://assets/textures/t_flashlightpattern.png" id="4_32hag"]
 [ext_resource type="Resource" uid="uid://clmpcg0b0n83e" path="res://player/player_movement_stats.tres" id="4_yllr7"]
 [ext_resource type="Script" uid="uid://j4xrbyjpvyma" path="res://player/state_machine/player_state_machine/states/idle.gd" id="4_yw30f"]
+[ext_resource type="Script" uid="uid://ih43deqpmqkr" path="res://player/state_machine/parent_state_machine.gd" id="5_e7oew"]
 [ext_resource type="Script" uid="uid://capg0c20sgw64" path="res://player/state_machine/player_state_machine/states/aim_idle.gd" id="5_ebec5"]
 [ext_resource type="Script" uid="uid://5iqjhpfbqgbn" path="res://player/state_machine/player_state_machine/states/sprint.gd" id="5_rgyib"]
 [ext_resource type="Script" uid="uid://b7xmdnk10jxaa" path="res://player/state_machine/player_state_machine/states/sprint_jump.gd" id="6_8t03j"]
+[ext_resource type="Script" uid="uid://t276pqmht660" path="res://player/state_machine/parent_state_machine/unarmed.gd" id="6_c35mf"]
 [ext_resource type="Script" uid="uid://cicumq4isdc2o" path="res://player/state_machine/player_state_machine/states/jump.gd" id="6_hg6s5"]
 [ext_resource type="Script" uid="uid://dfs6ojecqvb8" path="res://player/state_machine/player_state_machine/states/aim_walk.gd" id="6_yllr7"]
 [ext_resource type="Script" uid="uid://cr4snst382pd0" path="res://player/state_machine/player_state_machine/states/sprint_fall.gd" id="7_2ieo8"]
@@ -16,6 +18,11 @@
 [ext_resource type="Script" uid="uid://c7ngb8jh8hycu" path="res://player/state_machine/player_state_machine/states/run.gd" id="8_2ieo8"]
 [ext_resource type="Script" uid="uid://dgnrfion7spx3" path="res://player/reticle.gd" id="14_kb6p2"]
 [ext_resource type="PackedScene" uid="uid://bexog0o6buw5i" path="res://player/character_model.tscn" id="17_e7oew"]
+[ext_resource type="Script" uid="uid://b4uo3oi1gwjv0" path="res://player/state_machine/parent_state_machine/armed.gd" id="18_c35mf"]
+[ext_resource type="Script" uid="uid://clr3chvtifxc2" path="res://player/weapon_manager/weapon_manager.gd" id="21_x7c3f"]
+[ext_resource type="Script" uid="uid://ds8ol5ij3uqbn" path="res://player/weapon_manager/weapon_resource.gd" id="22_g4c7l"]
+[ext_resource type="Resource" uid="uid://bpiuqumyeekfp" path="res://player/weapon_manager/weapons/pistol.tres" id="23_knn7v"]
+[ext_resource type="Resource" uid="uid://dwrvg5h5tuvrj" path="res://player/weapon_manager/weapons/shotgun.tres" id="24_7pqkx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aqe1g"]
 radius = 0.70703125
@@ -30,46 +37,58 @@ script = ExtResource("1")
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1442459787]
 
-[node name="CharacterModel" parent="." unique_id=2129502881 node_paths=PackedStringArray("armature") instance=ExtResource("17_e7oew")]
+[node name="CharacterModel" parent="." unique_id=2129502881 node_paths=PackedStringArray("right_hand") instance=ExtResource("17_e7oew")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
-armature = NodePath("human_female")
+right_hand = NodePath("RightHandBoneAttachment3D/RightHand")
 
 [node name="Skeleton3D" parent="CharacterModel/human_female/Armature" parent_id_path=PackedInt32Array(2129502881, 637101310, 592122506) index="0" unique_id=706045538]
-bones/0/position = Vector3(-16.512012, 19.497355, -974.4938)
-bones/0/rotation = Quaternion(-0.74022424, -0.047903907, 0.0015462417, 0.67064965)
-bones/1/rotation = Quaternion(0.16102181, 0.1089117, 0.9769675, -0.08800463)
-bones/2/rotation = Quaternion(-0.21197622, 0.0071368623, 0.03670634, 0.9765593)
-bones/3/rotation = Quaternion(0.49227384, 0.03839424, -0.08305045, 0.8656183)
-bones/4/rotation = Quaternion(0.35902974, 0.013176367, -9.3533075e-05, 0.9332331)
-bones/6/rotation = Quaternion(-0.07925075, 0.021751778, 0.9955078, -0.04701563)
-bones/7/rotation = Quaternion(-0.18850014, 0.08323764, -0.041436628, 0.9776616)
-bones/8/rotation = Quaternion(0.5460551, -0.026493734, 0.037105136, 0.8365078)
-bones/9/rotation = Quaternion(0.3760657, -0.01430895, -0.0010494553, 0.926482)
-bones/11/rotation = Quaternion(-0.0360917, 0.008685097, 0.046093334, 0.9982472)
-bones/12/rotation = Quaternion(0.012273255, -0.0034435734, 0.017056117, 0.99977326)
-bones/13/rotation = Quaternion(0.012100149, -0.0034618613, 0.016986784, 0.9997765)
-bones/14/rotation = Quaternion(-0.6725452, -0.3335887, 0.50853074, -0.42166102)
-bones/15/rotation = Quaternion(0.5442779, 0.13600285, 0.06539646, 0.8252201)
-bones/16/rotation = Quaternion(-0.030801745, 0.0007578884, 0.01174289, 0.9994563)
-bones/17/rotation = Quaternion(-0.0040071295, 0.038847107, 0.061376885, 0.99735034)
-bones/18/rotation = Quaternion(0.09307707, -0.00054032047, 0.0046027033, 0.99564815)
-bones/19/rotation = Quaternion(0.1496325, -0.0015432918, 0.05931512, 0.9869597)
-bones/20/rotation = Quaternion(0.11042504, 0.0016126116, 0.028158993, 0.9934842)
-bones/22/rotation = Quaternion(-0.018246017, 0.0008884044, 0.09991542, 0.9948282)
-bones/23/rotation = Quaternion(0.04644436, 0.08367328, -0.2805168, 0.9550665)
-bones/24/rotation = Quaternion(-0.10150641, -0.047620036, -0.061576832, 0.9917848)
-bones/26/rotation = Quaternion(0.1289883, -0.0027358264, 0.007874674, 0.9916111)
-bones/27/rotation = Quaternion(-0.07382765, 0.0023026627, -0.032440268, 0.99674064)
-bones/29/rotation = Quaternion(0.665297, -0.33603054, 0.5411932, 0.3893243)
-bones/30/rotation = Quaternion(0.4483291, -0.22388573, -0.09186451, 0.8604866)
-bones/31/rotation = Quaternion(-0.026451243, -0.0020384518, -0.041757107, 0.9987756)
-bones/32/rotation = Quaternion(0.054911308, -0.12878746, 0.002837125, 0.99014676)
-bones/33/rotation = Quaternion(-0.020548701, -0.0008295513, -0.07289693, 0.99712753)
-bones/34/rotation = Quaternion(0.14844063, 0.0043368107, -0.055047616, 0.9873786)
-bones/35/rotation = Quaternion(0.17115769, -0.0031246177, -0.026303427, 0.98488754)
-bones/37/rotation = Quaternion(-0.032293983, 0.008921336, -0.14324996, 0.98911935)
-bones/38/rotation = Quaternion(0.039979976, -0.07022439, 0.30657583, 0.94841003)
-bones/39/rotation = Quaternion(-0.16991468, 0.032809675, 0.072137535, 0.98226714)
+bones/0/position = Vector3(-24.45984, -36.77057, -846.3002)
+bones/0/rotation = Quaternion(-0.5974905, -0.00036415132, 0.01512371, 0.8017333)
+bones/1/rotation = Quaternion(0.070179835, 0.19680333, 0.9761773, 0.05849212)
+bones/2/rotation = Quaternion(-0.4631533, -0.03891395, 0.028365636, 0.88496906)
+bones/3/rotation = Quaternion(0.76880646, 0.095214255, -0.009536905, 0.6322816)
+bones/4/rotation = Quaternion(0.38257262, 0.016975397, 0.0009759088, 0.923769)
+bones/6/rotation = Quaternion(0.0066012796, 0.4593138, 0.887889, -0.025305808)
+bones/7/rotation = Quaternion(-0.7420261, 0.04713607, -0.03097163, 0.6679942)
+bones/8/rotation = Quaternion(0.4798466, -0.15847357, -0.08589262, 0.8586361)
+bones/9/rotation = Quaternion(0.38117164, -0.015138315, -0.0012792766, 0.92437947)
+bones/11/rotation = Quaternion(-0.031802334, -0.017364725, -0.03981241, 0.99855)
+bones/12/rotation = Quaternion(0.026163494, -0.0021352284, -0.0035365333, 0.9996492)
+bones/13/rotation = Quaternion(0.025959043, -0.0015910794, -0.0037490455, 0.99965477)
+bones/14/rotation = Quaternion(-0.6402242, -0.35433683, 0.5517454, -0.40016916)
+bones/15/rotation = Quaternion(0.36483613, 0.00883127, 0.045882653, 0.92989856)
+bones/16/rotation = Quaternion(0.079659365, 0.02346832, 0.71402407, 0.69517857)
+bones/17/rotation = Quaternion(-0.016116142, 0.27860427, 0.20100915, 0.93899703)
+bones/18/rotation = Quaternion(0.35372573, -0.0288869, 0.1591138, 0.9212635)
+bones/19/rotation = Quaternion(0.31979403, -0.0033844674, 0.13008137, 0.93850905)
+bones/20/rotation = Quaternion(0.34379637, 0.0072201528, 0.12608516, 0.930513)
+bones/22/rotation = Quaternion(-0.017947832, 0.008717668, 0.13495897, 0.99065024)
+bones/23/rotation = Quaternion(0.08801773, 0.013050353, -0.17534211, 0.98047835)
+bones/24/rotation = Quaternion(-0.07554874, 0.037813626, -0.10339959, 0.9910454)
+bones/26/rotation = Quaternion(0.030485988, -0.008729544, 0.028248457, 0.9990978)
+bones/27/rotation = Quaternion(-0.06747038, 0.0069091604, 0.008799768, 0.99765855)
+bones/29/rotation = Quaternion(0.5968388, -0.4049964, 0.53238547, 0.4430882)
+bones/30/rotation = Quaternion(0.40798378, -0.33835632, 0.019732336, 0.8477471)
+bones/31/rotation = Quaternion(0.057980824, -0.019570816, -0.58512866, 0.80862826)
+bones/32/rotation = Quaternion(-0.10462175, -0.1488112, -0.018957779, 0.98313284)
+bones/33/rotation = Quaternion(0.5294923, 0.0033228733, -0.2736852, 0.8029466)
+bones/34/rotation = Quaternion(0.458338, 0.013687171, -0.1737295, 0.8715257)
+bones/35/rotation = Quaternion(0.4766577, -0.017533427, -0.14759552, 0.8664327)
+bones/37/rotation = Quaternion(0.00039467774, -0.04137109, -0.17186856, 0.9842508)
+bones/38/rotation = Quaternion(0.08225978, -0.016294224, 0.2182715, 0.9722784)
+bones/39/rotation = Quaternion(-0.15012896, -0.010519026, -0.0007129708, 0.9886102)
+
+[node name="AnimationTree" parent="CharacterModel" index="1" unique_id=1337558712]
+parameters/armed_movement/current_state = ""
+parameters/armed_movement/current_index = -1
+parameters/walk_blend/blend_position = Vector2(0, 0)
+parameters/run_blend/blend_position = Vector2(0, 0)
+parameters/weapon_blend/blend_amount = 0.0
+parameters/OneShot/active = false
+parameters/OneShot/internal_active = false
+
+[node name="RightHandBoneAttachment3D" parent="CharacterModel" index="2" unique_id=840078213]
+transform = Transform3D(0.0015621069, 0.00036522653, 0.0011943333, 0.00079378474, -0.0017669213, -0.0004978921, 0.00096422475, 0.00086290174, -0.0015250157, -0.45650113, 1.8024958, -0.007206635)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1523230566]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6802559, 0)
@@ -108,47 +127,111 @@ spring_length = 3.0
 [node name="Camera3D" type="Camera3D" parent="Camera/EdgeSpringArm3D/RearSpringArm3D" unique_id=815236964]
 fov = 90.0
 
-[node name="StateMachine" type="Node" parent="." unique_id=1213998511 node_paths=PackedStringArray("animation_controller", "start_state")]
+[node name="StateMachine" type="Node" parent="." unique_id=1036717628 node_paths=PackedStringArray("animation_controller", "weapon_manager", "start_state")]
+script = ExtResource("5_e7oew")
+animation_controller = NodePath("../CharacterModel")
+weapon_manager = NodePath("../WeaponManager")
+start_state = NodePath("Unarmed")
+metadata/_custom_type_script = "uid://bphkdoca07s8t"
+
+[node name="Unarmed" type="Node" parent="StateMachine" unique_id=376873891 node_paths=PackedStringArray("state_machine")]
+script = ExtResource("6_c35mf")
+state_machine = NodePath("UnarmedStateMachine")
+status = "non_combat"
+metadata/_custom_type_script = "uid://c4v3t1cpyypgs"
+
+[node name="UnarmedStateMachine" type="Node" parent="StateMachine/Unarmed" unique_id=1213998511 node_paths=PackedStringArray("animation_controller", "start_state")]
 script = ExtResource("3_g1dw6")
 player_movement_stats = ExtResource("4_yllr7")
-animation_controller = NodePath("../CharacterModel")
+animation_controller = NodePath("../../../CharacterModel")
 start_state = NodePath("Idle")
 
-[node name="Idle" type="Node" parent="StateMachine" unique_id=1457010616]
+[node name="Idle" type="Node" parent="StateMachine/Unarmed/UnarmedStateMachine" unique_id=1457010616]
 script = ExtResource("4_yw30f")
 on_enter_animation = "idle"
 
-[node name="AimIdle" type="Node" parent="StateMachine" unique_id=451369836]
+[node name="AimIdle" type="Node" parent="StateMachine/Unarmed/UnarmedStateMachine" unique_id=451369836]
 script = ExtResource("5_ebec5")
 on_enter_animation = "idle"
 
-[node name="AimWalk" type="Node" parent="StateMachine" unique_id=1889159365]
+[node name="AimWalk" type="Node" parent="StateMachine/Unarmed/UnarmedStateMachine" unique_id=1889159365]
 script = ExtResource("6_yllr7")
 on_enter_animation = "walk"
 
-[node name="Sprint" type="Node" parent="StateMachine" unique_id=826485904]
+[node name="Sprint" type="Node" parent="StateMachine/Unarmed/UnarmedStateMachine" unique_id=826485904]
 script = ExtResource("5_rgyib")
 on_enter_animation = "sprint"
 
-[node name="SprintJump" type="Node" parent="StateMachine" unique_id=1784801310]
+[node name="SprintJump" type="Node" parent="StateMachine/Unarmed/UnarmedStateMachine" unique_id=1784801310]
 script = ExtResource("6_8t03j")
 on_enter_animation = "jump"
 
-[node name="SprintFall" type="Node" parent="StateMachine" unique_id=947572431 node_paths=PackedStringArray("floor_ray_cast")]
+[node name="SprintFall" type="Node" parent="StateMachine/Unarmed/UnarmedStateMachine" unique_id=947572431 node_paths=PackedStringArray("floor_ray_cast")]
 script = ExtResource("7_2ieo8")
-floor_ray_cast = NodePath("../../FloorRaycast")
+floor_ray_cast = NodePath("../../../../FloorRaycast")
 on_enter_animation = "jump"
 
-[node name="Jump" type="Node" parent="StateMachine" unique_id=1374170922]
+[node name="Jump" type="Node" parent="StateMachine/Unarmed/UnarmedStateMachine" unique_id=1374170922]
 script = ExtResource("6_hg6s5")
 on_enter_animation = "jump"
 
-[node name="Fall" type="Node" parent="StateMachine" unique_id=1004848484 node_paths=PackedStringArray("floor_ray_cast")]
+[node name="Fall" type="Node" parent="StateMachine/Unarmed/UnarmedStateMachine" unique_id=1004848484 node_paths=PackedStringArray("floor_ray_cast")]
 script = ExtResource("7_8t03j")
-floor_ray_cast = NodePath("../../FloorRaycast")
+floor_ray_cast = NodePath("../../../../FloorRaycast")
 on_enter_animation = "jump"
 
-[node name="Run" type="Node" parent="StateMachine" unique_id=102809649]
+[node name="Run" type="Node" parent="StateMachine/Unarmed/UnarmedStateMachine" unique_id=102809649]
+script = ExtResource("8_2ieo8")
+on_enter_animation = "run"
+
+[node name="Armed" type="Node" parent="StateMachine" unique_id=820148267 node_paths=PackedStringArray("state_machine")]
+script = ExtResource("18_c35mf")
+state_machine = NodePath("ArmedStateMachine")
+status = "combat"
+metadata/_custom_type_script = "uid://c4v3t1cpyypgs"
+
+[node name="ArmedStateMachine" type="Node" parent="StateMachine/Armed" unique_id=469400321 node_paths=PackedStringArray("animation_controller", "start_state")]
+script = ExtResource("3_g1dw6")
+player_movement_stats = ExtResource("4_yllr7")
+animation_controller = NodePath("../../../CharacterModel")
+start_state = NodePath("Idle")
+metadata/_custom_type_script = "uid://bphkdoca07s8t"
+
+[node name="Idle" type="Node" parent="StateMachine/Armed/ArmedStateMachine" unique_id=402185735]
+script = ExtResource("4_yw30f")
+on_enter_animation = "idle"
+
+[node name="AimIdle" type="Node" parent="StateMachine/Armed/ArmedStateMachine" unique_id=1346456578]
+script = ExtResource("5_ebec5")
+on_enter_animation = "idle"
+
+[node name="AimWalk" type="Node" parent="StateMachine/Armed/ArmedStateMachine" unique_id=1071278863]
+script = ExtResource("6_yllr7")
+on_enter_animation = "walk"
+
+[node name="Sprint" type="Node" parent="StateMachine/Armed/ArmedStateMachine" unique_id=1213113504]
+script = ExtResource("5_rgyib")
+on_enter_animation = "sprint"
+
+[node name="SprintJump" type="Node" parent="StateMachine/Armed/ArmedStateMachine" unique_id=1800977419]
+script = ExtResource("6_8t03j")
+on_enter_animation = "jump"
+
+[node name="SprintFall" type="Node" parent="StateMachine/Armed/ArmedStateMachine" unique_id=1466737755 node_paths=PackedStringArray("floor_ray_cast")]
+script = ExtResource("7_2ieo8")
+floor_ray_cast = NodePath("../../../../FloorRaycast")
+on_enter_animation = "jump"
+
+[node name="Jump" type="Node" parent="StateMachine/Armed/ArmedStateMachine" unique_id=1527442151]
+script = ExtResource("6_hg6s5")
+on_enter_animation = "jump"
+
+[node name="Fall" type="Node" parent="StateMachine/Armed/ArmedStateMachine" unique_id=123928622 node_paths=PackedStringArray("floor_ray_cast")]
+script = ExtResource("7_8t03j")
+floor_ray_cast = NodePath("../../../../FloorRaycast")
+on_enter_animation = "jump"
+
+[node name="Run" type="Node" parent="StateMachine/Armed/ArmedStateMachine" unique_id=533699944]
 script = ExtResource("8_2ieo8")
 on_enter_animation = "run"
 
@@ -175,14 +258,23 @@ script = ExtResource("14_kb6p2")
 [node name="FloorRaycast" type="RayCast3D" parent="." unique_id=1548788488]
 target_position = Vector3(0, -0.5, 0)
 
+[node name="WeaponManager" type="Node3D" parent="." unique_id=165068207]
+script = ExtResource("21_x7c3f")
+weapons = Array[ExtResource("22_g4c7l")]([ExtResource("23_knn7v"), ExtResource("24_7pqkx")])
+
 [connection signal="camera_rotated" from="Camera" to="CharacterModel" method="_on_camera_camera_rotated"]
-[connection signal="aim_entered" from="StateMachine/AimIdle" to="Camera" method="_on_aim_entered"]
-[connection signal="aim_exited" from="StateMachine/AimIdle" to="Camera" method="_on_aim_exited"]
-[connection signal="aim_entered" from="StateMachine/AimWalk" to="Camera" method="_on_aim_entered"]
-[connection signal="aim_exited" from="StateMachine/AimWalk" to="Camera" method="_on_aim_exited"]
-[connection signal="sprint_ended" from="StateMachine/Sprint" to="Camera" method="_on_sprint_ended"]
-[connection signal="sprint_started" from="StateMachine/Sprint" to="Camera" method="_on_sprint_sprint_started"]
-[connection signal="sprint_ended" from="StateMachine/SprintFall" to="Camera" method="_on_sprint_ended"]
+[connection signal="aim_entered" from="StateMachine/Unarmed/UnarmedStateMachine/AimIdle" to="Camera" method="_on_aim_entered"]
+[connection signal="aim_exited" from="StateMachine/Unarmed/UnarmedStateMachine/AimIdle" to="Camera" method="_on_aim_exited"]
+[connection signal="aim_entered" from="StateMachine/Unarmed/UnarmedStateMachine/AimWalk" to="Camera" method="_on_aim_entered"]
+[connection signal="aim_exited" from="StateMachine/Unarmed/UnarmedStateMachine/AimWalk" to="Camera" method="_on_aim_exited"]
+[connection signal="sprint_ended" from="StateMachine/Unarmed/UnarmedStateMachine/Sprint" to="Camera" method="_on_sprint_ended"]
+[connection signal="sprint_started" from="StateMachine/Unarmed/UnarmedStateMachine/Sprint" to="Camera" method="_on_sprint_sprint_started"]
+[connection signal="sprint_ended" from="StateMachine/Unarmed/UnarmedStateMachine/SprintFall" to="Camera" method="_on_sprint_ended"]
+[connection signal="aim_entered" from="StateMachine/Armed/ArmedStateMachine/AimIdle" to="Camera" method="_on_aim_entered"]
+[connection signal="aim_exited" from="StateMachine/Armed/ArmedStateMachine/AimIdle" to="Camera" method="_on_aim_exited"]
+[connection signal="aim_entered" from="StateMachine/Armed/ArmedStateMachine/AimWalk" to="Camera" method="_on_aim_entered"]
+[connection signal="aim_exited" from="StateMachine/Armed/ArmedStateMachine/AimWalk" to="Camera" method="_on_aim_exited"]
+[connection signal="weapon_changed" from="WeaponManager" to="CharacterModel" method="_on_weapon_manager_weapon_changed"]
 
 [editable path="CharacterModel"]
 [editable path="CharacterModel/human_female"]

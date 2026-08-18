@@ -12,9 +12,9 @@ func _update(delta: float) -> void:
 	
 	if floor_ray_cast.is_colliding():
 		if direction != Vector3.ZERO:
-			animation_state_changed.emit("Run")
+			animation_state_changed.emit("run")
 		else:
-			animation_state_changed.emit("Idle")
+			animation_state_changed.emit("idle")
 	
 	if is_on_floor():
 		if direction != Vector3.ZERO:

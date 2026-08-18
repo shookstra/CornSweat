@@ -7,4 +7,6 @@ func _ready() -> void:
 	for child: Motion in get_children():
 		child.animation_state_changed.connect(animation_controller.on_state_machine_animation_state_changed)
 		child.input_direction_changed.connect(animation_controller.on_character_input_direction_changed)
-	return super._ready()
+	
+	_create_state_map()
+	_set_active(false)

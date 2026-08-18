@@ -1,8 +1,18 @@
 [gd_resource type="Resource" script_class="Weapon" format=3 uid="uid://bpiuqumyeekfp"]
 
 [ext_resource type="Script" uid="uid://ds8ol5ij3uqbn" path="res://player/weapon_manager/weapon_resource.gd" id="1_ibd8x"]
+[ext_resource type="Animation" uid="uid://fs5qd8clleik" path="res://assets/character_model/animation/pistol_pose.res" id="2_2kno2"]
+[ext_resource type="Animation" uid="uid://dayptaap6n0y" path="res://assets/character_model/animation/reload.res" id="3_s4voq"]
+[ext_resource type="PackedScene" uid="uid://dyj55pkq4x5r8" path="res://player/weapon_manager/weapons/pistol.tscn" id="3_xgk2j"]
+[ext_resource type="Animation" uid="uid://bptjar3p0x6mp" path="res://assets/character_model/animation/pistol_shoot.res" id="4_xgk2j"]
 
 [resource]
 script = ExtResource("1_ibd8x")
 name = "Pistol"
+weapon_model = ExtResource("3_xgk2j")
+hand_position = Vector3(110, 121, 19)
+hand_rotation = Vector3(0, -1.5707964, 0)
+weapon_idle_animation = ExtResource("2_2kno2")
+weapon_shoot_animation = ExtResource("4_xgk2j")
+weapon_reload_animation = ExtResource("3_s4voq")
 metadata/_custom_type_script = "uid://ds8ol5ij3uqbn"
