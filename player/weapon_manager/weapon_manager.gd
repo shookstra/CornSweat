@@ -2,6 +2,8 @@ extends Node3D
 class_name WeaponManager
 
 signal weapon_changed(_weapon: Weapon)
+signal weapon_manager_started(status: String, _weapon: Weapon)
+signal weapon_manager_finished(status: String)
 
 @export var weapons: Array[Weapon]
 var current_weapon: Weapon
@@ -19,13 +21,13 @@ func _input(event: InputEvent) -> void:
 func on_combat_status_changed(status: String) -> void:
 	match status:
 		"non_combat":
-			pass
+			weapon_manager_finished.emit(status)
 		"combat":
-			start_weapon_manager()
+			start_weapon_manager(status)
 
-func start_weapon_manager() -> void:
+func start_weapon_manager(status: String) -> void:
 	var weapon_index: int = 0
-	weapon_changed.emit(weapons[weapon_index])
+	weapon_manager_started.emit(status, weapons[weapon_index])
 
 func change_weapon(weapon_index: int) -> void:
 	if weapons[weapon_index] == current_weapon:

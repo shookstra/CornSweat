@@ -1,18 +1,29 @@
 [gd_resource type="Resource" script_class="Weapon" format=3 uid="uid://bpiuqumyeekfp"]
 
+[ext_resource type="Resource" uid="uid://b38kmxbt32q7b" path="res://player/weapon_manager/ammo/ammo_resources/pistol_ammo.tres" id="1_d1vve"]
 [ext_resource type="Script" uid="uid://ds8ol5ij3uqbn" path="res://player/weapon_manager/weapon_resource.gd" id="1_ibd8x"]
+[ext_resource type="Script" uid="uid://bc51t1ky5o426" path="res://player/weapon_manager/ammo/ammo_resource.gd" id="2_1vcml"]
 [ext_resource type="Animation" uid="uid://fs5qd8clleik" path="res://assets/character_model/animation/pistol_pose.res" id="2_2kno2"]
+[ext_resource type="Animation" uid="uid://cmei25ntyudsm" path="res://assets/character_model/animation/change_weapon.res" id="2_xgk2j"]
 [ext_resource type="Animation" uid="uid://dayptaap6n0y" path="res://assets/character_model/animation/reload.res" id="3_s4voq"]
 [ext_resource type="PackedScene" uid="uid://dyj55pkq4x5r8" path="res://player/weapon_manager/weapons/pistol.tscn" id="3_xgk2j"]
 [ext_resource type="Animation" uid="uid://bptjar3p0x6mp" path="res://assets/character_model/animation/pistol_shoot.res" id="4_xgk2j"]
+
+[sub_resource type="Resource" id="Resource_d1vve"]
+script = ExtResource("2_1vcml")
+ammo_type = "Pistol"
+metadata/_custom_type_script = "uid://bc51t1ky5o426"
 
 [resource]
 script = ExtResource("1_ibd8x")
 name = "Pistol"
 weapon_model = ExtResource("3_xgk2j")
-hand_position = Vector3(110, 121, 19)
-hand_rotation = Vector3(0, -1.5707964, 0)
+hand_position = Vector3(20, 50, 20)
+hand_rotation = Vector3(3.1415927, 0.5235988, -1.5707964)
 weapon_idle_animation = ExtResource("2_2kno2")
 weapon_shoot_animation = ExtResource("4_xgk2j")
 weapon_reload_animation = ExtResource("3_s4voq")
+weapon_change_animation = ExtResource("2_xgk2j")
+current_ammo = SubResource("Resource_d1vve")
+reserve_ammo = Array[ExtResource("2_1vcml")]([ExtResource("1_d1vve"), ExtResource("1_d1vve")])
 metadata/_custom_type_script = "uid://ds8ol5ij3uqbn"

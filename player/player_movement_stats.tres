@@ -6,4 +6,5 @@
 script = ExtResource("1_e42c2")
 time_to_jump_apex = 0.25
 jump_height = 1.5
+sprint_duration = 10.0
 metadata/_custom_type_script = "uid://b3doanwomxhwx"

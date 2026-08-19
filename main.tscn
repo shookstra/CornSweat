@@ -9,20 +9,26 @@
 [ext_resource type="PackedScene" uid="uid://biafure627tqm" path="res://nature/detail_bench_2.tscn" id="8_5vw27"]
 [ext_resource type="MeshLibrary" uid="uid://ct2cy6i3x2ybv" path="res://mesh_library.tres" id="8_kek77"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5vw27"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4c57u"]
+sky_top_color = Color(0.06767365, 0.09052234, 0.12095586, 1)
+sky_horizon_color = Color(0.19268262, 0, 0.07911534, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.11672544, 3.3390708e-07, 0.066293925, 1)
 
-[sub_resource type="Sky" id="Sky_kek77"]
-sky_material = SubResource("ProceduralSkyMaterial_5vw27")
+[sub_resource type="Sky" id="Sky_5vw27"]
+sky_material = SubResource("ProceduralSkyMaterial_4c57u")
 
 [sub_resource type="Environment" id="Environment_4c57u"]
-sky = SubResource("Sky_kek77")
+background_mode = 2
+sky = SubResource("Sky_5vw27")
 ambient_light_source = 1
 reflected_light_source = 1
+tonemap_mode = 3
 ssao_enabled = true
+sdfgi_enabled = true
 glow_enabled = true
 volumetric_fog_density = 0.03
+adjustment_enabled = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
 shader = ExtResource("3_h2yge")

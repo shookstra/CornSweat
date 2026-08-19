@@ -10,3 +10,7 @@ class_name Weapon
 @export var weapon_idle_animation: Animation
 @export var weapon_shoot_animation: Animation
 @export var weapon_reload_animation: Animation
+@export var weapon_change_animation: Animation
+
+@export var current_ammo: Ammo
+@export var reserve_ammo: Array[Ammo]
