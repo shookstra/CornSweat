@@ -1,7 +1,14 @@
 [gd_scene format=3 uid="uid://dfc0mtr0my6p7"]
 
 [ext_resource type="PackedScene" uid="uid://ck5buj0l7cn4l" path="res://assets/models/DoubleBarrelShotgun.fbx" id="1_7erif"]
+[ext_resource type="Script" uid="uid://d0ntpnj853rc2" path="res://player/weapon_manager/weapons/weapon_model.gd" id="1_fnqiv"]
 [ext_resource type="Texture2D" uid="uid://bvftdwohmcmiv" path="res://assets/textures/DoubleBarrel.png" id="2_fnqiv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7erif"]
+albedo_texture = ExtResource("2_fnqiv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fnqiv"]
+albedo_texture = ExtResource("2_fnqiv")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6yjs"]
 albedo_texture = ExtResource("2_fnqiv")
@@ -9,10 +16,27 @@ albedo_texture = ExtResource("2_fnqiv")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdicg"]
 albedo_texture = ExtResource("2_fnqiv")
 
-[node name="DoubleBarrelShotgun" unique_id=1644856187 instance=ExtResource("1_7erif")]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m8ngb"]
+albedo_texture = ExtResource("2_fnqiv")
 
-[node name="Base" parent="." index="0" unique_id=1058080457]
+[node name="Shotgun" type="Node3D" unique_id=1809266722]
+script = ExtResource("1_fnqiv")
+
+[node name="DoubleBarrelShotgun" parent="." unique_id=1644856187 instance=ExtResource("1_7erif")]
+
+[node name="Base" parent="DoubleBarrelShotgun" index="0" unique_id=1058080457]
+surface_material_override/0 = SubResource("StandardMaterial3D_7erif")
+
+[node name="Barrel" parent="DoubleBarrelShotgun/Base" index="0" unique_id=918558105]
+surface_material_override/0 = SubResource("StandardMaterial3D_fnqiv")
+
+[node name="Shell_Right" parent="DoubleBarrelShotgun/Base/Barrel" index="0" unique_id=1200260099]
 surface_material_override/0 = SubResource("StandardMaterial3D_o6yjs")
 
-[node name="Barrel" parent="Base" index="0" unique_id=918558105]
+[node name="Shell_Left" parent="DoubleBarrelShotgun/Base/Barrel" index="1" unique_id=566255549]
 surface_material_override/0 = SubResource("StandardMaterial3D_tdicg")
+
+[node name="Trigger" parent="DoubleBarrelShotgun/Base" index="1" unique_id=1014771835]
+surface_material_override/0 = SubResource("StandardMaterial3D_m8ngb")
+
+[editable path="DoubleBarrelShotgun"]

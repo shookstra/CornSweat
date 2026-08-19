@@ -55,16 +55,17 @@ func _on_camera_camera_rotated(_rotation: Vector2) -> void:
 			rotate_object_local(Vector3(0,1,0), current_mouse_rotation.x)
 
 func _on_weapon_manager_weapon_changed(_weapon: Weapon) -> void:
+	remove_weapon_attachment()
 	load_new_weapon(_weapon)
 
 func load_new_weapon(_weapon: Weapon) -> void:
 	right_hand.position = _weapon.hand_position
 	right_hand.rotation = _weapon.hand_rotation
 	
-	animation_tree.tree_root.get_node("weapon_idle_animation").set_animation(_weapon.weapon_idle_animation.resource_name)
-	animation_tree.tree_root.get_node("weapon_shoot_animation").set_animation(_weapon.weapon_shoot_animation.resource_name)
-	animation_tree.tree_root.get_node("weapon_reload_animation").set_animation(_weapon.weapon_reload_animation.resource_name)
-	animation_tree.tree_root.get_node("weapon_change_animation").set_animation(_weapon.weapon_change_animation.resource_name)
+	#animation_tree.tree_root.get_node("weapon_idle_animation").set_animation(_weapon.weapon_idle_animation.resource_name)
+	#animation_tree.tree_root.get_node("weapon_shoot_animation").set_animation(_weapon.weapon_shoot_animation.resource_name)
+	#animation_tree.tree_root.get_node("weapon_reload_animation").set_animation(_weapon.weapon_reload_animation.resource_name)
+	#animation_tree.tree_root.get_node("weapon_change_animation").set_animation(_weapon.weapon_change_animation.resource_name)
 	
 	animation_tree["parameters/change_weapon/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
 	next_weapon_to_load = _weapon.weapon_model
@@ -82,7 +83,7 @@ func remove_weapon_attachment() -> void:
 		current_weapon_attachment.queue_free()
 
 
-func _on_weapon_manager_weapon_manager_finished(status: String) -> void:
+func _on_weapon_manager_weapon_manager_finished(status: String, weapons_is_empty: bool) -> void:
 	on_combat_status_changed(status)
 	remove_weapon_attachment()
 

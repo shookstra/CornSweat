@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://o71vfg2xo3vu"]
+
+[ext_resource type="Script" uid="uid://d0ntpnj853rc2" path="res://player/weapon_manager/weapons/weapon_model.gd" id="1_rgng3"]
+[ext_resource type="PackedScene" uid="uid://ck5buj0l7cn4l" path="res://assets/models/DoubleBarrelShotgun.fbx" id="2_lcgh4"]
+[ext_resource type="Texture2D" uid="uid://bvftdwohmcmiv" path="res://assets/textures/DoubleBarrel.png" id="3_kmb4i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ggfw"]
+albedo_texture = ExtResource("3_kmb4i")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5l8ac"]
+albedo_texture = ExtResource("3_kmb4i")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hsgds"]
+albedo_texture = ExtResource("3_kmb4i")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ujw8k"]
+albedo_texture = ExtResource("3_kmb4i")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sf7xm"]
+albedo_texture = ExtResource("3_kmb4i")
+
+[node name="Shotgun" type="Node3D" unique_id=1104864930 node_paths=PackedStringArray("bullet_point")]
+transform = Transform3D(200, 0, 0, 0, 200, 0, 0, 0, 200, 0, 0, 0)
+script = ExtResource("1_rgng3")
+bullet_point = NodePath("BulletPoint")
+
+[node name="DoubleBarrelShotgun" parent="." unique_id=1644856187 instance=ExtResource("2_lcgh4")]
+
+[node name="Base" parent="DoubleBarrelShotgun" index="0" unique_id=1058080457]
+surface_material_override/0 = SubResource("StandardMaterial3D_7ggfw")
+
+[node name="Barrel" parent="DoubleBarrelShotgun/Base" index="0" unique_id=918558105]
+surface_material_override/0 = SubResource("StandardMaterial3D_5l8ac")
+
+[node name="Shell_Right" parent="DoubleBarrelShotgun/Base/Barrel" index="0" unique_id=1200260099]
+surface_material_override/0 = SubResource("StandardMaterial3D_hsgds")
+
+[node name="Shell_Left" parent="DoubleBarrelShotgun/Base/Barrel" index="1" unique_id=566255549]
+surface_material_override/0 = SubResource("StandardMaterial3D_ujw8k")
+
+[node name="Trigger" parent="DoubleBarrelShotgun/Base" index="1" unique_id=1014771835]
+surface_material_override/0 = SubResource("StandardMaterial3D_sf7xm")
+
+[node name="BulletPoint" type="Marker3D" parent="." unique_id=1526258174]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 247.91225, 87.62963, 0)
+
+[editable path="DoubleBarrelShotgun"]
