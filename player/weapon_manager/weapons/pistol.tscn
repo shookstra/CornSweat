@@ -8,7 +8,7 @@ script = ExtResource("1_hx1bh")
 bullet_point = NodePath("BulletPoint")
 
 [node name="BulletPoint" type="Marker3D" parent="." unique_id=1526258174]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 247.91225, 87.62963, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 305.0287, 87.62963, 0)
 
 [node name="Pistol_1" parent="." unique_id=852091429 instance=ExtResource("1_1qnb0")]
 transform = Transform3D(150, 0, 0, 0, 150, 0, 0, 0, 150, 0, 0, 0)

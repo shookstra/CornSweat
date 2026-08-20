@@ -21,7 +21,7 @@ func update_ammo_text(_weapon: Weapon) -> void:
 	reserve_ammo_label.text = str(reserve_ammo)
 
 
-func _on_weapon_manager_weapon_manager_started(_status: String, _weapon: Weapon) -> void:
+func _on_weapon_manager_weapon_manager_started(_status: String, _weapon: Weapon, _model: WeaponModel) -> void:
 	update_ammo_text(_weapon)
 	show()
 

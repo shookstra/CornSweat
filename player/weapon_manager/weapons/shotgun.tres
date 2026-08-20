@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="Weapon" format=3 uid="uid://dwrvg5h5tuvrj"]
 
+[ext_resource type="PackedScene" uid="uid://t172csk2lq0c" path="res://player/weapon_manager/projectiles/rigid_body_projectile.tscn" id="1_6nji1"]
 [ext_resource type="Script" uid="uid://bc51t1ky5o426" path="res://player/weapon_manager/ammo/ammo_resource.gd" id="1_l3rp6"]
 [ext_resource type="Script" uid="uid://ds8ol5ij3uqbn" path="res://player/weapon_manager/weapon_resource.gd" id="1_ugosb"]
 [ext_resource type="Animation" uid="uid://cic81evntd5wj" path="res://player/animations/rifle_idle.res" id="2_bn7eo"]
@@ -12,18 +13,21 @@
 script = ExtResource("1_l3rp6")
 ammo_type = "shotgun"
 amount = 2
+projectile = ExtResource("1_6nji1")
 metadata/_custom_type_script = "uid://bc51t1ky5o426"
 
 [sub_resource type="Resource" id="Resource_peqx4"]
 script = ExtResource("1_l3rp6")
 ammo_type = "shotgun"
 amount = 2
+projectile = ExtResource("1_6nji1")
 metadata/_custom_type_script = "uid://bc51t1ky5o426"
 
-[sub_resource type="Resource" id="Resource_o0l2r"]
+[sub_resource type="Resource" id="Resource_8thpw"]
 script = ExtResource("1_l3rp6")
 ammo_type = "shotgun"
 amount = 2
+projectile = ExtResource("1_6nji1")
 metadata/_custom_type_script = "uid://bc51t1ky5o426"
 
 [resource]
@@ -36,5 +40,5 @@ weapon_shoot_animation = ExtResource("7_ryg86")
 weapon_reload_animation = ExtResource("3_l3rp6")
 weapon_change_animation = ExtResource("2_cbii8")
 current_ammo = SubResource("Resource_6nji1")
-reserve_ammo = Array[ExtResource("1_l3rp6")]([SubResource("Resource_peqx4"), SubResource("Resource_o0l2r")])
+reserve_ammo = Array[ExtResource("1_l3rp6")]([SubResource("Resource_peqx4"), SubResource("Resource_8thpw")])
 metadata/_custom_type_script = "uid://ds8ol5ij3uqbn"

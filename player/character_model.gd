@@ -11,7 +11,7 @@ enum CombatStatus {COMBAT, NONCOMBAT}
 var current_mouse_rotation: Vector2
 var input_dir: Vector2
 var current_combat_status: CombatStatus = CombatStatus.NONCOMBAT
-var next_weapon_to_load: PackedScene
+var next_weapon_to_load: WeaponModel
 
 func on_state_machine_animation_state_changed(state: String) -> void:
 	match current_combat_status:
@@ -54,11 +54,11 @@ func _on_camera_camera_rotated(_rotation: Vector2) -> void:
 			transform.basis = Basis()
 			rotate_object_local(Vector3(0,1,0), current_mouse_rotation.x)
 
-func _on_weapon_manager_weapon_changed(_weapon: Weapon) -> void:
+func _on_weapon_manager_weapon_changed(_weapon: Weapon, _model: WeaponModel) -> void:
 	remove_weapon_attachment()
-	load_new_weapon(_weapon)
+	load_new_weapon(_weapon, _model)
 
-func load_new_weapon(_weapon: Weapon) -> void:
+func load_new_weapon(_weapon: Weapon, model: WeaponModel) -> void:
 	right_hand.position = _weapon.hand_position
 	right_hand.rotation = _weapon.hand_rotation
 	
@@ -66,15 +66,14 @@ func load_new_weapon(_weapon: Weapon) -> void:
 	#animation_tree.tree_root.get_node("weapon_shoot_animation").set_animation(_weapon.weapon_shoot_animation.resource_name)
 	#animation_tree.tree_root.get_node("weapon_reload_animation").set_animation(_weapon.weapon_reload_animation.resource_name)
 	#animation_tree.tree_root.get_node("weapon_change_animation").set_animation(_weapon.weapon_change_animation.resource_name)
-	
-	animation_tree["parameters/change_weapon/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
-	next_weapon_to_load = _weapon.weapon_model
+	#
+	#animation_tree["parameters/change_weapon/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+	next_weapon_to_load = model
 	attach_weapon_to_hand()
 
 func attach_weapon_to_hand() -> void:
 	if next_weapon_to_load:
-		var new_weapon: Node3D = next_weapon_to_load.instantiate()
-		right_hand.add_child(new_weapon)
+		right_hand.add_child(next_weapon_to_load)
 		next_weapon_to_load = null
 
 func remove_weapon_attachment() -> void:
@@ -84,9 +83,19 @@ func remove_weapon_attachment() -> void:
 
 
 func _on_weapon_manager_weapon_manager_finished(status: String, weapons_is_empty: bool) -> void:
+	if animation_tree["parameters/combat_transition/current_state"] == status:
+		return
 	on_combat_status_changed(status)
 	remove_weapon_attachment()
 
-func _on_weapon_manager_weapon_manager_started(status: String, _weapon: Weapon) -> void:
+func _on_weapon_manager_weapon_manager_started(status: String, _weapon: Weapon, _model: WeaponModel) -> void:
 	on_combat_status_changed(status)
-	load_new_weapon(_weapon)
+	load_new_weapon(_weapon, _model)
+
+func _on_weapon_manager_weapon_fired() -> void:
+	print("shoot!")
+	animation_tree["parameters/shoot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+
+func _on_weapon_manager_weapon_reloaded() -> void:
+	print("reload...")
+	animation_tree["parameters/reload/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://t172csk2lq0c"]
+
+[ext_resource type="Script" uid="uid://dv7ssyyk3bwi8" path="res://player/weapon_manager/projectiles/rigid_body_projectile.gd" id="1_1ng6m"]
+[ext_resource type="PackedScene" uid="uid://bewdhn2supw1q" path="res://player/weapon_manager/projectiles/bullets/bullet.tscn" id="2_na6on"]
+
+[node name="RigidBodyProjectile" type="Node3D" unique_id=1474021374]
+script = ExtResource("1_1ng6m")
+projectile_velocity = 200
+rigid_body_bullet = ExtResource("2_na6on")
+metadata/_custom_type_script = "uid://dv7ssyyk3bwi8"

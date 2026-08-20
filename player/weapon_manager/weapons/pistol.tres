@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="Weapon" format=3 uid="uid://bpiuqumyeekfp"]
 
+[ext_resource type="PackedScene" uid="uid://t172csk2lq0c" path="res://player/weapon_manager/projectiles/rigid_body_projectile.tscn" id="1_1vcml"]
 [ext_resource type="Resource" uid="uid://b38kmxbt32q7b" path="res://player/weapon_manager/ammo/ammo_resources/pistol_ammo.tres" id="1_d1vve"]
 [ext_resource type="Script" uid="uid://ds8ol5ij3uqbn" path="res://player/weapon_manager/weapon_resource.gd" id="1_ibd8x"]
 [ext_resource type="Script" uid="uid://bc51t1ky5o426" path="res://player/weapon_manager/ammo/ammo_resource.gd" id="2_1vcml"]
@@ -12,6 +13,7 @@
 [sub_resource type="Resource" id="Resource_d1vve"]
 script = ExtResource("2_1vcml")
 ammo_type = "Pistol"
+projectile = ExtResource("1_1vcml")
 metadata/_custom_type_script = "uid://bc51t1ky5o426"
 
 [resource]

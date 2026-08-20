@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="Ammo" format=3 uid="uid://btv4j22x6webe"]
 
 [ext_resource type="Script" uid="uid://bc51t1ky5o426" path="res://player/weapon_manager/ammo/ammo_resource.gd" id="1_8smlm"]
+[ext_resource type="PackedScene" uid="uid://t172csk2lq0c" path="res://player/weapon_manager/projectiles/rigid_body_projectile.tscn" id="1_46myb"]
 
 [resource]
 script = ExtResource("1_8smlm")
 ammo_type = "shotgun"
 amount = 2
+projectile = ExtResource("1_46myb")
 metadata/_custom_type_script = "uid://bc51t1ky5o426"

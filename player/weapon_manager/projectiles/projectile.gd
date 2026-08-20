@@ -32,7 +32,3 @@ func _camera_ray_cast(_range: float = 100) -> Vector3:
 		return collision
 	else:
 		return ray_end
-	
-	
-	
-	
