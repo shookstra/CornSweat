@@ -31,8 +31,6 @@ func _ready() -> void:
 	jump_gravity = PLAYER_MOVEMENT_STATS.get_jump_gravity()
 	fall_gravity = PLAYER_MOVEMENT_STATS.get_fall_gravity()
 	jump_velocity = PLAYER_MOVEMENT_STATS.get_jump_velocity(jump_gravity)
-	
-	print(speed)
 
 func _enter() -> void:
 	if on_enter_animation:

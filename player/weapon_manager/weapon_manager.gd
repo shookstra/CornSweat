@@ -12,6 +12,7 @@ signal ammo_updated(_weapon: Weapon)
 
 @export var weapons: Array[Weapon]
 @export var weapon_status_timer: Timer
+@export var camera: Camera3D
 
 var current_status: WeaponManagerStatus = WeaponManagerStatus.UNAVAILABLE
 var current_weapon: Weapon
@@ -20,6 +21,8 @@ var action_queue: Callable
 var change_weapon_wait_time: float = 0.0
 var reload_weapon_wait_time: float = 0.0
 var shoot_weapon_wait_time: float = 0.0
+
+var bullet_hole_decal = preload("res://player/weapon_manager/decals/bullet_hole.tscn")
 
 func _ready() -> void:
 	if weapons.is_empty():
@@ -86,11 +89,12 @@ func set_weapon_wait_time(_weapon: Weapon) -> void:
 func shoot() -> void:
 	if current_weapon.current_ammo:
 		if current_weapon.current_ammo.amount > 0:
+			perform_hitscan()
 			weapon_fired.emit()
-			wait_for_action_completion(shoot_weapon_wait_time)
-			var _projectile: Projectile = get_projectile()
-			add_child(_projectile)
-			_projectile._set_weapon_projectile(current_weapon, current_weapon_model)
+			#wait_for_action_completion(shoot_weapon_wait_time)
+			#var _projectile: Projectile = get_projectile()
+			#add_child(_projectile)
+			#_projectile._set_weapon_projectile(current_weapon, current_weapon_model)
 			current_weapon.current_ammo.amount -= 1
 			ammo_updated.emit(current_weapon)
 		else:
@@ -118,3 +122,30 @@ func calculate_reload() -> void:
 
 func _on_weapon_status_timer_timeout() -> void:
 	set_weapon_manager_status(WeaponManagerStatus.AVAILABLE)
+
+
+func perform_hitscan() -> void:
+	if not camera:
+		print("no camera assigned!")
+		return
+	
+	var space_state = camera.get_world_3d().direct_space_state
+	var from = camera.global_position
+	var forward = -camera.global_transform.basis.z
+	var to = from + forward * current_weapon.range
+	
+	var query = PhysicsRayQueryParameters3D.create(from, to)
+	var result = space_state.intersect_ray(query)
+	
+	if result:
+		print("Hit: ", result.collider.name, " at ", result.position)
+		_spawn_impact_marker(result.position, result.get("normal"))
+	
+func _spawn_impact_marker(position: Vector3, normal: Vector3) -> void:
+		var new_bullet_hole_decal = bullet_hole_decal.instantiate()
+		get_tree().root.add_child(new_bullet_hole_decal)
+		new_bullet_hole_decal.global_position = position
+		if normal != Vector3.UP and normal != Vector3.DOWN:
+			new_bullet_hole_decal.look_at(new_bullet_hole_decal.global_transform.origin + normal, Vector3.UP)
+			new_bullet_hole_decal.rotate_object_local(Vector3(1,0,0), 90)
+		get_tree().create_timer(10.0).timeout.connect(new_bullet_hole_decal.queue_free)

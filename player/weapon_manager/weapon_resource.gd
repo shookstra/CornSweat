@@ -14,3 +14,4 @@ class_name Weapon
 
 @export var current_ammo: Ammo
 @export var reserve_ammo: Array[Ammo]
+@export var range: int = 100

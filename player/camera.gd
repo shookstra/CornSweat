@@ -54,17 +54,6 @@ func _input(event: InputEvent) -> void:
 				
 			if event.is_action_pressed("swap_camera_alignment"):
 				swap_camera_alignment()
-			
-	if event.is_action_pressed("model_view"):
-		if current_view == View.GAME:
-			current_view = View.MODEL
-			start_model_view_camera()
-			model_view_changed.emit(true)
-		else:
-			current_view = View.GAME
-			stop_model_view_camera()
-			model_view_changed.emit(false)
-	
 
 func _process(delta: float) -> void:
 	if current_view == View.GAME:

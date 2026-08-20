@@ -54,6 +54,10 @@ shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_aqe1g"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_aqe1g"]
+
 [node name="World" type="Node3D" unique_id=618116689]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1440945132]
@@ -125,3 +129,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.092732, -0.6513631, 5.1588
 
 [node name="bush03" parent="Nature" unique_id=364124407 instance=ExtResource("5_lquwl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.188447, -0.6513631, 3.4216738)
+
+[node name="Area3D" type="StaticBody3D" parent="." unique_id=107750629]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=288255163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8081398, -4.9824276)
+shape = SubResource("BoxShape3D_aqe1g")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D" unique_id=472773266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8081398, -4.9824257)
+mesh = SubResource("BoxMesh_aqe1g")
