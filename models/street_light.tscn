@@ -49,10 +49,11 @@ data = PackedVector3Array(0.0231, 0.95379996, 0, -0.0231, 0.96, -0.0231, 0.0231,
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=647342625]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.015638351, 9.428026, -1.5069847)
-light_energy = 10.0
+light_energy = 15.0
 light_projector = ExtResource("1_ft76y")
 shadow_enabled = true
-spot_range = 25.0
+spot_range = 50.0
+spot_angle = 75.0
 
 [node name="detail-light-single2" type="MeshInstance3D" parent="." unique_id=371059667]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cub8aadx2snl6"
-path.s3tc="res://.godot/imported/corolla_tex.jpg-34ddec5b8af9e116bda9daaa9c52d2e6.s3tc.ctex"
+uid="uid://cefbncwrmjqs3"
+path.s3tc="res://.godot/imported/nissanv16_basecolor.png-f4eb2dea271cbcbec3cf7d53aebe1df6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/textures/corolla_tex.jpg"
-dest_files=["res://.godot/imported/corolla_tex.jpg-34ddec5b8af9e116bda9daaa9c52d2e6.s3tc.ctex"]
+source_file="res://assets/models/textures/nissanv16_basecolor.png"
+dest_files=["res://.godot/imported/nissanv16_basecolor.png-f4eb2dea271cbcbec3cf7d53aebe1df6.s3tc.ctex"]
 
 [params]
 
