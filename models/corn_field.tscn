@@ -1,0 +1,600 @@
+[gd_scene format=3 uid="uid://dlxo5xp7vjtsa"]
+
+[ext_resource type="PackedScene" uid="uid://dmby7cp4p60e" path="res://models/corn.tscn" id="1_llrlf"]
+
+[node name="CornField" type="Node3D" unique_id=1477345932]
+
+[node name="CornSection" type="Node3D" parent="." unique_id=1750484270]
+
+[node name="CornRow" type="Node3D" parent="CornSection" unique_id=1998137902]
+
+[node name="Corn" parent="CornSection/CornRow" unique_id=892402625 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection/CornRow" unique_id=1179375808 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection/CornRow" unique_id=1328845397 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection/CornRow" unique_id=1401351377 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection/CornRow" unique_id=1392850378 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection/CornRow" unique_id=1286740761 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow2" type="Node3D" parent="CornSection" unique_id=1412306402]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.0369444)
+
+[node name="Corn" parent="CornSection/CornRow2" unique_id=162371604 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection/CornRow2" unique_id=806534195 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection/CornRow2" unique_id=569021634 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection/CornRow2" unique_id=2111023012 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection/CornRow2" unique_id=1180310603 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection/CornRow2" unique_id=1299581093 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow3" type="Node3D" parent="CornSection" unique_id=145624348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.52249193)
+
+[node name="Corn" parent="CornSection/CornRow3" unique_id=1009489016 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection/CornRow3" unique_id=722492344 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection/CornRow3" unique_id=1759669659 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection/CornRow3" unique_id=1296193122 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection/CornRow3" unique_id=1179794985 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection/CornRow3" unique_id=1765360525 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow4" type="Node3D" parent="CornSection" unique_id=703127086]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5272832)
+
+[node name="Corn" parent="CornSection/CornRow4" unique_id=1719776790 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection/CornRow4" unique_id=328781742 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection/CornRow4" unique_id=615881772 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection/CornRow4" unique_id=481283027 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection/CornRow4" unique_id=303427445 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection/CornRow4" unique_id=1278918575 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow5" type="Node3D" parent="CornSection" unique_id=1076344523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.0336986)
+
+[node name="Corn" parent="CornSection/CornRow5" unique_id=1497286095 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection/CornRow5" unique_id=1173204701 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection/CornRow5" unique_id=1021632361 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection/CornRow5" unique_id=1118123357 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection/CornRow5" unique_id=2016427255 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection/CornRow5" unique_id=535063016 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow6" type="Node3D" parent="CornSection" unique_id=127767839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.5159984)
+
+[node name="Corn" parent="CornSection/CornRow6" unique_id=1366066300 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection/CornRow6" unique_id=858180667 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection/CornRow6" unique_id=1100391511 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection/CornRow6" unique_id=1761982319 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection/CornRow6" unique_id=87275532 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection/CornRow6" unique_id=1510898694 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow7" type="Node3D" parent="CornSection" unique_id=1574706153]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.5159984)
+
+[node name="Corn" parent="CornSection/CornRow7" unique_id=80164975 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection/CornRow7" unique_id=473867219 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection/CornRow7" unique_id=76257492 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection/CornRow7" unique_id=913126525 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection/CornRow7" unique_id=417678523 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection/CornRow7" unique_id=1166000212 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornSection2" type="Node3D" parent="." unique_id=677320024]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.934723)
+
+[node name="CornRow" type="Node3D" parent="CornSection2" unique_id=1107759807]
+
+[node name="Corn" parent="CornSection2/CornRow" unique_id=1042783384 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection2/CornRow" unique_id=1062837724 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection2/CornRow" unique_id=1015813662 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection2/CornRow" unique_id=1227918291 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection2/CornRow" unique_id=721698210 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection2/CornRow" unique_id=715434763 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow2" type="Node3D" parent="CornSection2" unique_id=2003406625]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.0369444)
+
+[node name="Corn" parent="CornSection2/CornRow2" unique_id=220492589 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection2/CornRow2" unique_id=873076162 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection2/CornRow2" unique_id=257614708 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection2/CornRow2" unique_id=1572192033 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection2/CornRow2" unique_id=1049158840 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection2/CornRow2" unique_id=1429842903 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow3" type="Node3D" parent="CornSection2" unique_id=1409073415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.52249193)
+
+[node name="Corn" parent="CornSection2/CornRow3" unique_id=983306349 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection2/CornRow3" unique_id=495352571 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection2/CornRow3" unique_id=1087049912 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection2/CornRow3" unique_id=1719261656 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection2/CornRow3" unique_id=1952576749 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection2/CornRow3" unique_id=744589017 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow4" type="Node3D" parent="CornSection2" unique_id=1637350222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5272832)
+
+[node name="Corn" parent="CornSection2/CornRow4" unique_id=945870737 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection2/CornRow4" unique_id=734454397 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection2/CornRow4" unique_id=29374068 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection2/CornRow4" unique_id=261392425 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection2/CornRow4" unique_id=1016205664 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection2/CornRow4" unique_id=1099205476 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow5" type="Node3D" parent="CornSection2" unique_id=2011350812]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.0336986)
+
+[node name="Corn" parent="CornSection2/CornRow5" unique_id=107592464 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection2/CornRow5" unique_id=2094016182 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection2/CornRow5" unique_id=1728502190 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection2/CornRow5" unique_id=1768771420 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection2/CornRow5" unique_id=107934525 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection2/CornRow5" unique_id=149913447 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow6" type="Node3D" parent="CornSection2" unique_id=989611775]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.5159984)
+
+[node name="Corn" parent="CornSection2/CornRow6" unique_id=2131403580 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection2/CornRow6" unique_id=985786897 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection2/CornRow6" unique_id=706520637 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection2/CornRow6" unique_id=1482723408 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection2/CornRow6" unique_id=468518488 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection2/CornRow6" unique_id=1274866901 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow7" type="Node3D" parent="CornSection2" unique_id=1701435727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.5159984)
+
+[node name="Corn" parent="CornSection2/CornRow7" unique_id=697427966 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection2/CornRow7" unique_id=105407683 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection2/CornRow7" unique_id=209010859 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection2/CornRow7" unique_id=110388194 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection2/CornRow7" unique_id=1768499061 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection2/CornRow7" unique_id=1796691499 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornSection3" type="Node3D" parent="." unique_id=1347843028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1879883, 0, -2.934723)
+
+[node name="CornRow" type="Node3D" parent="CornSection3" unique_id=1711699596]
+
+[node name="Corn" parent="CornSection3/CornRow" unique_id=1406444556 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection3/CornRow" unique_id=336535085 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection3/CornRow" unique_id=1019666362 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection3/CornRow" unique_id=1944739425 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection3/CornRow" unique_id=2037021180 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection3/CornRow" unique_id=390656706 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow2" type="Node3D" parent="CornSection3" unique_id=1202666487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.0369444)
+
+[node name="Corn" parent="CornSection3/CornRow2" unique_id=613368443 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection3/CornRow2" unique_id=15294782 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection3/CornRow2" unique_id=433498388 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection3/CornRow2" unique_id=1926612226 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection3/CornRow2" unique_id=276523318 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection3/CornRow2" unique_id=1772597008 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow3" type="Node3D" parent="CornSection3" unique_id=50351061]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.52249193)
+
+[node name="Corn" parent="CornSection3/CornRow3" unique_id=1203774398 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection3/CornRow3" unique_id=1120635361 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection3/CornRow3" unique_id=409858683 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection3/CornRow3" unique_id=1758223726 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection3/CornRow3" unique_id=1684932742 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection3/CornRow3" unique_id=1152239915 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow4" type="Node3D" parent="CornSection3" unique_id=1871501630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5272832)
+
+[node name="Corn" parent="CornSection3/CornRow4" unique_id=1641153154 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection3/CornRow4" unique_id=1631354746 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection3/CornRow4" unique_id=1054091863 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection3/CornRow4" unique_id=1094302793 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection3/CornRow4" unique_id=887927836 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection3/CornRow4" unique_id=601199925 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow5" type="Node3D" parent="CornSection3" unique_id=473736860]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.0336986)
+
+[node name="Corn" parent="CornSection3/CornRow5" unique_id=1478226809 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection3/CornRow5" unique_id=735309439 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection3/CornRow5" unique_id=1327775084 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection3/CornRow5" unique_id=1424671237 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection3/CornRow5" unique_id=583332596 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection3/CornRow5" unique_id=179160113 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow6" type="Node3D" parent="CornSection3" unique_id=67560207]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.5159984)
+
+[node name="Corn" parent="CornSection3/CornRow6" unique_id=401265161 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection3/CornRow6" unique_id=1669942025 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection3/CornRow6" unique_id=2919041 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection3/CornRow6" unique_id=42245840 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection3/CornRow6" unique_id=45735915 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection3/CornRow6" unique_id=139575038 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow7" type="Node3D" parent="CornSection3" unique_id=207846873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.5159984)
+
+[node name="Corn" parent="CornSection3/CornRow7" unique_id=773318132 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection3/CornRow7" unique_id=1087900686 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection3/CornRow7" unique_id=348248824 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection3/CornRow7" unique_id=594400146 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection3/CornRow7" unique_id=1308574042 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection3/CornRow7" unique_id=952188809 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornSection4" type="Node3D" parent="." unique_id=1654671771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1879883, 0, -0.057403564)
+
+[node name="CornRow" type="Node3D" parent="CornSection4" unique_id=1661058580]
+
+[node name="Corn" parent="CornSection4/CornRow" unique_id=358036473 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection4/CornRow" unique_id=194179559 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection4/CornRow" unique_id=1426690754 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection4/CornRow" unique_id=618357505 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection4/CornRow" unique_id=1543619565 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection4/CornRow" unique_id=221280662 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow2" type="Node3D" parent="CornSection4" unique_id=693835046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.0369444)
+
+[node name="Corn" parent="CornSection4/CornRow2" unique_id=1857342505 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection4/CornRow2" unique_id=1461637977 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection4/CornRow2" unique_id=1538098122 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection4/CornRow2" unique_id=209772334 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection4/CornRow2" unique_id=1152318388 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection4/CornRow2" unique_id=1726734523 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow3" type="Node3D" parent="CornSection4" unique_id=1779384158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.52249193)
+
+[node name="Corn" parent="CornSection4/CornRow3" unique_id=1007547195 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection4/CornRow3" unique_id=265299542 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection4/CornRow3" unique_id=719461402 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection4/CornRow3" unique_id=1308355539 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection4/CornRow3" unique_id=1472395125 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection4/CornRow3" unique_id=514184000 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow4" type="Node3D" parent="CornSection4" unique_id=348875747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5272832)
+
+[node name="Corn" parent="CornSection4/CornRow4" unique_id=629651857 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection4/CornRow4" unique_id=772746657 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection4/CornRow4" unique_id=1442918714 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection4/CornRow4" unique_id=671935992 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection4/CornRow4" unique_id=1649135002 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection4/CornRow4" unique_id=1663639256 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow5" type="Node3D" parent="CornSection4" unique_id=717966955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.0336986)
+
+[node name="Corn" parent="CornSection4/CornRow5" unique_id=995386890 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection4/CornRow5" unique_id=444624276 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection4/CornRow5" unique_id=788276486 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection4/CornRow5" unique_id=165058642 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection4/CornRow5" unique_id=280864991 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection4/CornRow5" unique_id=247749066 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow6" type="Node3D" parent="CornSection4" unique_id=133646055]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.5159984)
+
+[node name="Corn" parent="CornSection4/CornRow6" unique_id=1043010996 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection4/CornRow6" unique_id=779632090 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection4/CornRow6" unique_id=555445122 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection4/CornRow6" unique_id=885052267 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection4/CornRow6" unique_id=1475564544 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection4/CornRow6" unique_id=2032283602 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)
+
+[node name="CornRow7" type="Node3D" parent="CornSection4" unique_id=1685677410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.5159984)
+
+[node name="Corn" parent="CornSection4/CornRow7" unique_id=97702482 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0.7862413, -0.021714449)
+
+[node name="Corn2" parent="CornSection4/CornRow7" unique_id=1709835638 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0.59661686, 0.7862413, 0)
+
+[node name="Corn3" parent="CornSection4/CornRow7" unique_id=180968619 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.1336255, 0.7862413, -0.069485426)
+
+[node name="Corn4" parent="CornSection4/CornRow7" unique_id=1208924357 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 1.660992, 0.7862413, 0)
+
+[node name="Corn5" parent="CornSection4/CornRow7" unique_id=336531340 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.208435, 0.7862413, 0)
+
+[node name="Corn6" parent="CornSection4/CornRow7" unique_id=157990661 instance=ExtResource("1_llrlf")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 2.714347, 0.7862413, 0.039085656)

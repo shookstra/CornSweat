@@ -1,7 +1,8 @@
 [gd_scene format=4 uid="uid://ccklkm8tjrh04"]
 
-[ext_resource type="Texture2D" uid="uid://yk7mj0knndsr" path="res://assets/models/Textures/grass.png" id="1_lrsfn"]
-[ext_resource type="Texture2D" uid="uid://dhollrs3hpsct" path="res://assets/models/Textures/asphalt.png" id="2_lrsfn"]
+[ext_resource type="Texture2D" uid="uid://yk7mj0knndsr" path="res://assets/models/textures/grass.png" id="1_lrsfn"]
+[ext_resource type="Texture2D" uid="uid://b80n0o3i8mpfp" path="res://assets/models/textures/dirt.png" id="2_5qpkl"]
+[ext_resource type="Texture2D" uid="uid://dhollrs3hpsct" path="res://assets/models/textures/asphalt.png" id="2_lrsfn"]
 [ext_resource type="PackedScene" uid="uid://dbnch3sjmtrvf" path="res://assets/models/road-asphalt-corner-inner.fbx" id="3_5qpkl"]
 [ext_resource type="PackedScene" uid="uid://skfncaiebl11" path="res://assets/models/road-asphalt-corner-outer.fbx" id="4_275it"]
 [ext_resource type="PackedScene" uid="uid://cjscaad0a6pgh" path="res://assets/models/road-asphalt-corner.fbx" id="5_ho12l"]
@@ -54,6 +55,30 @@ rough = true
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lrsfn"]
 data = PackedVector3Array(0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_275it"]
+resource_name = "grass"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_5qpkl")
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ho12l"]
+resource_name = "Scene"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1e-05, 1),
+"attribute_data": PackedByteArray("AACAvwAAAAAAAFAmAACAPwAAgL8AAIA/AABQJgAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMA"),
+"material": SubResource("StandardMaterial3D_275it"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAPwAAAAAAAAA/AAAAvwAAAAAAAAC/AAAAPwAAAAAAAAC/AAAAvwAAAAAAAAA//3///wAA/7//f///AAD/v/9///8AAP+//3///wAA/78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_72yrp")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_stvcv"]
 resource_name = "asphalt"
 vertex_color_use_as_albedo = true
@@ -104,6 +129,16 @@ mesh = SubResource("ArrayMesh_o202s")
 physics_material_override = SubResource("PhysicsMaterial_4mmrg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="grass2/StaticBody3D" unique_id=835603019]
+shape = SubResource("ConcavePolygonShape3D_lrsfn")
+
+[node name="dirt" type="MeshInstance3D" parent="." unique_id=1852389146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1680756, 0, 0)
+mesh = SubResource("ArrayMesh_ho12l")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="dirt" unique_id=138053936]
+physics_material_override = SubResource("PhysicsMaterial_4mmrg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="dirt/StaticBody3D" unique_id=214923150]
 shape = SubResource("ConcavePolygonShape3D_lrsfn")
 
 [node name="road-asphalt-center" type="Node3D" parent="." unique_id=1798764004]
