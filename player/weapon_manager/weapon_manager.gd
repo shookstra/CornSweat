@@ -13,6 +13,7 @@ signal ammo_updated(_weapon: Weapon)
 @export var weapons: Array[Weapon]
 @export var weapon_status_timer: Timer
 @export var camera: Camera3D
+@export var flashlight: SpotLight3D
 
 var current_status: WeaponManagerStatus = WeaponManagerStatus.UNAVAILABLE
 var current_weapon: Weapon
@@ -47,6 +48,9 @@ func _input(event: InputEvent) -> void:
 			
 		if event.is_action_pressed("reload"):
 			reload()
+		
+	if event.is_action_pressed("toggle_flashlight"):
+		flashlight.visible = !flashlight.visible
 
 func on_combat_status_changed(status: String) -> void:
 	match status:
@@ -141,10 +145,10 @@ func perform_hitscan() -> void:
 		print("Hit: ", result.collider.name, " at ", result.position)
 		_spawn_impact_marker(result.position, result.get("normal"))
 	
-func _spawn_impact_marker(position: Vector3, normal: Vector3) -> void:
+func _spawn_impact_marker(_position: Vector3, normal: Vector3) -> void:
 		var new_bullet_hole_decal = bullet_hole_decal.instantiate()
 		get_tree().root.add_child(new_bullet_hole_decal)
-		new_bullet_hole_decal.global_position = position
+		new_bullet_hole_decal.global_position = _position
 		if normal != Vector3.UP and normal != Vector3.DOWN:
 			new_bullet_hole_decal.look_at(new_bullet_hole_decal.global_transform.origin + normal, Vector3.UP)
 			new_bullet_hole_decal.rotate_object_local(Vector3(1,0,0), 90)

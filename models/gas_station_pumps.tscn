@@ -925,6 +925,7 @@ mesh = SubResource("ArrayMesh_b62d8")
 shape = SubResource("ConcavePolygonShape3D_ubbmh")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lamp_012" unique_id=1952458715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.006680988)
 omni_range = 20.0
 
 [node name="Lamp_013" type="MeshInstance3D" parent="." unique_id=1533069801]
@@ -937,6 +938,7 @@ mesh = SubResource("ArrayMesh_rab66")
 shape = SubResource("ConcavePolygonShape3D_gkx1l")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lamp_013" unique_id=345135858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.006680988)
 omni_range = 20.0
 
 [node name="Lamp_014" type="MeshInstance3D" parent="." unique_id=1616791321]
@@ -949,6 +951,7 @@ mesh = SubResource("ArrayMesh_qpkap")
 shape = SubResource("ConcavePolygonShape3D_bhfol")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lamp_014" unique_id=536300076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.006680988)
 omni_range = 20.0
 
 [node name="Lamp_015" type="MeshInstance3D" parent="." unique_id=759255605]
@@ -961,6 +964,7 @@ mesh = SubResource("ArrayMesh_ox3wj")
 shape = SubResource("ConcavePolygonShape3D_n7pce")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lamp_015" unique_id=324437775]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.006680988)
 omni_range = 20.0
 
 [node name="Lamp_016" type="MeshInstance3D" parent="." unique_id=1605868853]
@@ -973,6 +977,7 @@ mesh = SubResource("ArrayMesh_aiqyc")
 shape = SubResource("ConcavePolygonShape3D_ampsk")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lamp_016" unique_id=1257843092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.006680988)
 omni_range = 20.0
 
 [node name="Lamp_017" type="MeshInstance3D" parent="." unique_id=313461926]
@@ -985,6 +990,7 @@ mesh = SubResource("ArrayMesh_0tc5g")
 shape = SubResource("ConcavePolygonShape3D_y43dt")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lamp_017" unique_id=676880747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.006680988)
 omni_range = 20.0
 
 [node name="Lamp_018" type="MeshInstance3D" parent="." unique_id=1869322193]
@@ -997,6 +1003,7 @@ mesh = SubResource("ArrayMesh_w7nkp")
 shape = SubResource("ConcavePolygonShape3D_x0vra")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lamp_018" unique_id=1907018946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.006680988)
 omni_range = 20.0
 
 [node name="Lamp_019" type="MeshInstance3D" parent="." unique_id=283689608]
@@ -1009,6 +1016,7 @@ mesh = SubResource("ArrayMesh_070t4")
 shape = SubResource("ConcavePolygonShape3D_dl2b5")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lamp_019" unique_id=1586547837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.006680988)
 omni_range = 20.0
 
 [node name="Lamp_020" type="MeshInstance3D" parent="." unique_id=309234326]
@@ -1021,6 +1029,7 @@ mesh = SubResource("ArrayMesh_a3cii")
 shape = SubResource("ConcavePolygonShape3D_b62d8")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lamp_020" unique_id=2097702633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.006680988)
 omni_range = 20.0
 
 [node name="Lamp_021" type="MeshInstance3D" parent="." unique_id=946669616]
@@ -1033,6 +1042,7 @@ mesh = SubResource("ArrayMesh_pgbl5")
 shape = SubResource("ConcavePolygonShape3D_rab66")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lamp_021" unique_id=167781897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.006680988)
 omni_range = 20.0
 
 [node name="Lamp_022" type="MeshInstance3D" parent="." unique_id=493002874]
@@ -1045,6 +1055,7 @@ mesh = SubResource("ArrayMesh_wmasn")
 shape = SubResource("ConcavePolygonShape3D_qpkap")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lamp_022" unique_id=1914522003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.006680988)
 omni_range = 20.0
 
 [node name="Lamp_023" type="MeshInstance3D" parent="." unique_id=418725097]
@@ -1057,6 +1068,7 @@ mesh = SubResource("ArrayMesh_brjbu")
 shape = SubResource("ConcavePolygonShape3D_ox3wj")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lamp_023" unique_id=1441583603]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.006680988)
 omni_range = 20.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1789232573]

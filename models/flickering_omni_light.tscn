@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dkp7ioh6sxhj1"]
+
+[ext_resource type="Script" uid="uid://cdc1vogv6e7wf" path="res://models/flickering_omni_light.gd" id="1_miy8n"]
+
+[node name="FlickeringOmniLight" type="OmniLight3D" unique_id=1185417411]
+omni_range = 10.0
+script = ExtResource("1_miy8n")
+
+[node name="Timer" type="Timer" parent="." unique_id=2007366446]
+wait_time = 0.4
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

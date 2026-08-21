@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://d4b46x0ubktfr" path="res://assets/models/road-asphalt-pavement.fbx" id="7_bxksm"]
 [ext_resource type="PackedScene" uid="uid://c44dy47c6axr7" path="res://assets/models/road-asphalt-side.fbx" id="8_sk1mu"]
 [ext_resource type="PackedScene" uid="uid://tbl5bgdj4c3p" path="res://assets/models/road-asphalt-straight.fbx" id="9_15qm8"]
+[ext_resource type="PackedScene" uid="uid://c802wpagox4sb" path="res://models/road_gravel.tscn" id="12_ho12l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6q5p"]
 resource_name = "grass"
@@ -172,3 +173,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.845829, 0, 1.5585938)
 
 [node name="road-asphalt-straight" parent="." unique_id=1975078062 instance=ExtResource("9_15qm8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1628723, 0, 1.5585938)
+
+[node name="RoadGravel" parent="." unique_id=302182845 instance=ExtResource("12_ho12l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7866364, 0, 0.055786133)
