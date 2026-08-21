@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cid7pt021g17a" path="res://assets/models/textures/Fuel_pump.png" id="5_equ1y"]
 [ext_resource type="Texture2D" uid="uid://cskkofw2rvxun" path="res://assets/models/textures/Concrete.jpg" id="6_qs1io"]
 [ext_resource type="Texture2D" uid="uid://d21aflclceukw" path="res://assets/models/textures/Light.jpg" id="7_kvjag"]
+[ext_resource type="PackedScene" uid="uid://dkp7ioh6sxhj1" path="res://models/flickering_omni_light.tscn" id="8_fgrap"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_illsv"]
 resource_name = "MetalPlates"
@@ -924,9 +925,10 @@ mesh = SubResource("ArrayMesh_b62d8")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Lamp_012/StaticBody3D" unique_id=1231991361]
 shape = SubResource("ConcavePolygonShape3D_ubbmh")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Lamp_012" unique_id=1952458715]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.006680988)
-omni_range = 20.0
+[node name="FlickeringOmniLight" parent="Lamp_012" unique_id=1185417411 instance=ExtResource("8_fgrap")]
+transform = Transform3D(1, 9.497e-42, 1.1580529e-21, 0, 1, -8.200167e-21, -1.1580529e-21, 8.200167e-21, 1, 0, 0, -0.014268987)
+max_energy = 5.0
+max_wait_time = 0.3
 
 [node name="Lamp_013" type="MeshInstance3D" parent="." unique_id=1533069801]
 transform = Transform3D(-0.7774633, -3.0275538e-07, 0, 3.0275538e-07, -0.7774633, 0, 0, 0, 0.7774633, 0.0012587118, -0.03742393, -0.005352993)
@@ -988,10 +990,6 @@ mesh = SubResource("ArrayMesh_0tc5g")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Lamp_017/StaticBody3D" unique_id=27374816]
 shape = SubResource("ConcavePolygonShape3D_y43dt")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Lamp_017" unique_id=676880747]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.006680988)
-omni_range = 20.0
 
 [node name="Lamp_018" type="MeshInstance3D" parent="." unique_id=1869322193]
 transform = Transform3D(-0.7774633, -3.0275538e-07, 0, 3.0275538e-07, -0.7774633, 0, 0, 0, 0.7774633, -0.05901601, 0.04003335, -0.005352993)
@@ -1070,6 +1068,11 @@ shape = SubResource("ConcavePolygonShape3D_ox3wj")
 [node name="OmniLight3D" type="OmniLight3D" parent="Lamp_023" unique_id=1441583603]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.006680988)
 omni_range = 20.0
+
+[node name="FlickeringOmniLight" parent="Lamp_023" unique_id=534862259 instance=ExtResource("8_fgrap")]
+transform = Transform3D(1, 9.497e-42, 1.1580529e-21, 0, 1, -8.200167e-21, -1.1580529e-21, 8.200167e-21, 1, 0, 0, -0.014268987)
+max_energy = 3.0
+max_wait_time = 4.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1789232573]
 
