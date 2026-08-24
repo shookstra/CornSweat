@@ -28,11 +28,11 @@
 [ext_resource type="PackedScene" uid="uid://wddmr1gnaeoh" path="res://objects/church.tscn" id="25_0odxb"]
 [ext_resource type="PackedScene" uid="uid://njbvdpxt34v7" path="res://objects/house1.tscn" id="26_lswn8"]
 [ext_resource type="PackedScene" uid="uid://dkp7ioh6sxhj1" path="res://objects/flickering_omni_light.tscn" id="27_a6jrf"]
-[ext_resource type="PackedScene" uid="uid://caavsrbt0k56c" path="res://objects/flashlight.tscn" id="28_xuqvo"]
 [ext_resource type="PackedScene" uid="uid://buiit1buek3it" path="res://objects/house2.tscn" id="29_qsp4k"]
 [ext_resource type="PackedScene" uid="uid://dn3ysg2x0w8gc" path="res://objects/forklift.tscn" id="31_seu75"]
 [ext_resource type="PackedScene" uid="uid://bayd356kihpyu" path="res://objects/cube_1_kg.tscn" id="33_4k2k6"]
 [ext_resource type="PackedScene" uid="uid://dyivbko8a3vwm" path="res://objects/abandoned_house.tscn" id="33_jq2sk"]
+[ext_resource type="PackedScene" uid="uid://cpokgsdh2ipdt" path="res://interactions/interactables/flashlight/Flashlight.tscn" id="35_0rl1p"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4c57u"]
 sky_top_color = Color(0.06767365, 0.09052234, 0.12095586, 1)
@@ -54,7 +54,8 @@ ssao_enabled = true
 ssil_enabled = true
 sdfgi_enabled = true
 glow_enabled = true
-fog_light_energy = 0.05
+fog_enabled = true
+fog_light_energy = 0.01
 fog_density = 0.1
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.03
@@ -102,10 +103,11 @@ environment = SubResource("Environment_4c57u")
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=46572873]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, -236.7829)
+visible = false
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1917848421 instance=ExtResource("2_0xm2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3086605, -0.4269855, -237.99583)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.930277, -0.4269855, -40.70996)
 
 [node name="Shaders" type="CanvasLayer" parent="." unique_id=563867572]
 layer = 0
@@ -315,9 +317,6 @@ transform = Transform3D(-0.79695576, 0, 0.06972465, 0, 0.8, 0, -0.06972465, 0, -
 [node name="IrvasCar" parent="Cars" unique_id=332060680 instance=ExtResource("15_vivmo")]
 transform = Transform3D(-26.047234, -147.72116, -6.5567083e-06, -1.1385605e-06, -6.457097e-06, 150, -147.72116, 26.047234, 2.8660283e-13, -46.0376, 0.107655525, 5.0197315)
 
-[node name="DroppedFlashlight" parent="." unique_id=1129843217 instance=ExtResource("28_xuqvo")]
-transform = Transform3D(-3.6280985e-06, 83.00122, 55.77451, -99.99999, -4.3711384e-06, 0, 2.437981e-06, -55.774506, 83.00123, 1.6405926, -0.46786213, -87.332405)
-
 [node name="TownContainer" type="Node3D" parent="." unique_id=662500510]
 
 [node name="DeadBodyInPlastic" parent="TownContainer" unique_id=2044468240 instance=ExtResource("24_htxhm")]
@@ -390,3 +389,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5982995, 9.536743e-07, -25
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.822781, 26.163044, 69.18168)
 size = Vector3(189.04892, 53.278748, 30.221985)
 material = SubResource("FogMaterial_aqe1g")
+
+[node name="Flashlight" parent="." unique_id=2144295958 instance=ExtResource("35_0rl1p")]
+transform = Transform3D(0.76529056, 0, -0.643685, 0, 1, 0, 0.643685, 0, 0.76529056, -7.284547, -0.21700525, -44.678234)

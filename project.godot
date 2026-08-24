@@ -29,7 +29,9 @@ folder_colors={
 "res://interactions/": "yellow",
 "res://inventory/": "orange",
 "res://objects/": "green",
-"res://player/": "red"
+"res://player/": "red",
+"res://shaders/": "teal",
+"res://ui/": "purple"
 }
 
 [input]

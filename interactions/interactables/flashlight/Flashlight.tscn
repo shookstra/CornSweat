@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cpokgsdh2ipdt"]
+
+[ext_resource type="PackedScene" uid="uid://cqcru3xq143lf" path="res://interactions/interactables/flashlight/FlashlightModel.tscn" id="1_cl3t6"]
+[ext_resource type="Script" uid="uid://cgn42qohi8ipe" path="res://interactions/interactables/flashlight/flashlight.gd" id="1_fgcxh"]
+[ext_resource type="Resource" uid="uid://ba043lm83h0ju" path="res://interactions/interactables/flashlight/flashlight.tres" id="2_c37ax"]
+[ext_resource type="Texture2D" uid="uid://cfwrs8jm8spy6" path="res://assets/textures/t_flashlightpattern.png" id="4_mns6l"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_cl3t6"]
+height = 1.1621704
+radius = 0.17089844
+
+[node name="Flashlight" type="RigidBody3D" unique_id=1564390132]
+script = ExtResource("1_fgcxh")
+item_data = ExtResource("2_c37ax")
+
+[node name="Cylinder" parent="." unique_id=1182204104 instance=ExtResource("1_cl3t6")]
+transform = Transform3D(-4.3711384e-06, 99.99999, 0, -99.99999, -4.3711384e-06, 0, 0, 0, 100, 0, -1.9275805e-09, -0.0440979)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1286698194]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -3.9061825e-09, -0.08936304)
+shape = SubResource("CylinderShape3D_cl3t6")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1031044112]
+transform = Transform3D(1, -7.764701e-23, -1.9852333e-21, 7.764701e-23, 1, 0, 1.9852333e-21, -1.54e-43, 1, -1.899075e-17, -2.595965e-10, -0.6374831)
+light_energy = 10.0
+light_projector = ExtResource("4_mns6l")
+light_size = 1.0
+shadow_enabled = true
+spot_range = 20.0

@@ -13,7 +13,6 @@ signal ammo_updated(_weapon: Weapon)
 @export var weapons: Array[Weapon]
 @export var weapon_status_timer: Timer
 @export var camera: Camera3D
-@export var flashlight: SpotLight3D
 
 var current_status: WeaponManagerStatus = WeaponManagerStatus.UNAVAILABLE
 var current_weapon: Weapon
@@ -48,9 +47,6 @@ func _input(event: InputEvent) -> void:
 			
 		if event.is_action_pressed("reload"):
 			reload()
-		
-	if event.is_action_pressed("toggle_flashlight"):
-		flashlight.visible = !flashlight.visible
 
 func on_combat_status_changed(status: String) -> void:
 	match status:

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ba043lm83h0ju"]
+
+[ext_resource type="Script" uid="uid://defkf8fbcyb3" path="res://interactions/item_data.gd" id="1_8kufd"]
+[ext_resource type="PackedScene" uid="uid://cqcru3xq143lf" path="res://interactions/interactables/flashlight/FlashlightModel.tscn" id="1_pj6ag"]
+[ext_resource type="Texture2D" uid="uid://dx0dpaantahb0" path="res://interactions/interactables/flashlight/flashlight_icon_compressed.png" id="1_w7m8x"]
+
+[resource]
+script = ExtResource("1_8kufd")
+name = "Flashlight"
+description = "Illuminates the darkness"
+item_icon = ExtResource("1_w7m8x")
+item_model_prefab = ExtResource("1_pj6ag")
+metadata/_custom_type_script = "uid://defkf8fbcyb3"
