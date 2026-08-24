@@ -4,6 +4,8 @@
 [ext_resource type="Shader" uid="uid://skcv4lvmrnub" path="res://shaders/vhs.gdshader" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://biafure627tqm" path="res://objects/nature/detail_bench_2.tscn" id="8_5vw27"]
 [ext_resource type="MeshLibrary" uid="uid://ct2cy6i3x2ybv" path="res://mesh_library.tres" id="8_kek77"]
+[ext_resource type="PackedScene" uid="uid://dnb637jp2oyq7" path="res://objects/candy_002.tscn" id="8_ok6jj"]
+[ext_resource type="PackedScene" uid="uid://bs0ciaa3ww86n" path="res://objects/candy.tscn" id="9_facbu"]
 [ext_resource type="PackedScene" uid="uid://baf8rpjcognpi" path="res://objects/diner.tscn" id="10_4c57u"]
 [ext_resource type="PackedScene" uid="uid://csts80qmq0d0y" path="res://objects/street_light.tscn" id="11_dg77c"]
 [ext_resource type="PackedScene" uid="uid://b8lh6nfkilpom" path="res://objects/white_van.tscn" id="11_efxa6"]
@@ -22,8 +24,10 @@
 [ext_resource type="PackedScene" uid="uid://ctrarcdnyx6m1" path="res://objects/trash4.tscn" id="19_getpj"]
 [ext_resource type="PackedScene" uid="uid://cg104mtjhfcky" path="res://objects/air_conditioner.tscn" id="20_82xsv"]
 [ext_resource type="PackedScene" uid="uid://n3txpfoeg0qj" path="res://objects/ice_machine.tscn" id="21_getpj"]
+[ext_resource type="PackedScene" uid="uid://cc6viecrjxhek" path="res://objects/shelving_003.tscn" id="22_b1qrp"]
 [ext_resource type="PackedScene" uid="uid://bpvio23gybeem" path="res://objects/bathrooms.tscn" id="22_ryguw"]
 [ext_resource type="PackedScene" uid="uid://c1qbcbh24ehrm" path="res://objects/trailer.tscn" id="23_d13ii"]
+[ext_resource type="PackedScene" uid="uid://ddx35qn3m4had" path="res://objects/woman_8.tscn" id="23_facbu"]
 [ext_resource type="PackedScene" uid="uid://cusljxv5sbq4q" path="res://objects/dead_body_in_plastic.tscn" id="24_htxhm"]
 [ext_resource type="PackedScene" uid="uid://wddmr1gnaeoh" path="res://objects/church.tscn" id="25_0odxb"]
 [ext_resource type="PackedScene" uid="uid://njbvdpxt34v7" path="res://objects/house1.tscn" id="26_lswn8"]
@@ -107,7 +111,7 @@ visible = false
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1917848421 instance=ExtResource("2_0xm2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.930277, -0.4269855, -40.70996)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.246914, -0.4269855, -6.505537)
 
 [node name="Shaders" type="CanvasLayer" parent="." unique_id=563867572]
 layer = 0
@@ -262,6 +266,12 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -14.
 [node name="GasStation" parent="GasStationContainer" unique_id=1950017136 instance=ExtResource("12_ycdy4")]
 transform = Transform3D(-149.9793, -2.4918766, -1.08923395e-07, -2.3821787e-20, -6.5567083e-06, 149.99998, -2.4918766, 149.9793, 6.555804e-06, -28.132744, 2.176291, 9.9481945)
 
+[node name="Candy_002" parent="GasStationContainer" unique_id=1833142311 instance=ExtResource("8_ok6jj")]
+transform = Transform3D(7.812838e-07, -17.87369, 7.812838e-07, 0, 7.812838e-07, 17.87369, 17.87369, 7.812838e-07, -3.4151e-14, -28.711153, 1.4375961, 16.36324)
+
+[node name="Candy" parent="GasStationContainer" unique_id=1917490995 instance=ExtResource("9_facbu")]
+transform = Transform3D(-1.732078e-06, 39.625324, 1.732078e-06, 0, -1.732078e-06, 39.625324, 39.625324, 1.732078e-06, 7.571153e-14, -27.473255, 1.2831256, 16.549828)
+
 [node name="GasStationSign" parent="GasStationContainer" unique_id=1213435101 instance=ExtResource("13_ycdy4")]
 transform = Transform3D(30, 0, 0, 0, -1.3113416e-06, 30, 0, -30, -1.3113416e-06, -14.310604, 5.241828, -57.087284)
 
@@ -305,6 +315,12 @@ transform = Transform3D(-160, 1.3987645e-05, 6.1141934e-13, 0, -6.9938224e-06, 1
 
 [node name="Bathrooms" parent="GasStationContainer" unique_id=96659383 instance=ExtResource("22_ryguw")]
 transform = Transform3D(-7.6494925e-06, -175, -7.6494925e-06, 0, -7.6494925e-06, 175, -175, 7.6494925e-06, 3.3436996e-13, -34.82507, 3.4584656, -50.123093)
+
+[node name="Shelving_003" parent="GasStationContainer" unique_id=1308226478 instance=ExtResource("22_b1qrp")]
+transform = Transform3D(-100.000015, 8.742278e-06, 3.8213708e-13, 0, -4.371139e-06, 100, 8.742279e-06, 100, 4.371139e-06, -27.980116, 0.5164492, 16.545067)
+
+[node name="Irva" parent="GasStationContainer" unique_id=1151389277 instance=ExtResource("23_facbu")]
+transform = Transform3D(-0.017258089, 0, 1.4999008, 0, 1.5, 0, -1.4999008, 0, -0.017258089, -35.921333, -0.49811494, 5.5848656)
 
 [node name="Cars" type="Node3D" parent="." unique_id=914186888]
 

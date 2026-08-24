@@ -2,7 +2,7 @@ extends Node
 
 @export var inventory_ui: Control
 @export var inventory_slot_count: int = 5
-
+@export var has_flashlight: bool = false
 @export var flashlight: SpotLight3D
 
 @onready var inventory_grid: GridContainer = %GridContainer
@@ -10,7 +10,6 @@ extends Node
 var inventory_slots: Array[InventorySlot] = []
 var inventory_slot_prefab: PackedScene = load("res://interactions/inventory_slot/InventorySlot.tscn")
 var inventory_full: bool = false
-var has_flashlight: bool = false
 
 func _ready() -> void:
 	for item_slot_index: int in inventory_slot_count:
