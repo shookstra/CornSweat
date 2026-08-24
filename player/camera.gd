@@ -63,12 +63,6 @@ func _process(_delta: float) -> void:
 	if current_view == View.GAME:
 		model_view_camera.global_transform = camera.global_transform
 		model_view_camera.global_rotation = camera.global_rotation
-		
-	if interaction_raycast.is_colliding():
-		var collision_object = interaction_raycast.get_collider()
-		interaction_label.text = collision_object.name
-	else:
-		interaction_label.text = ""
 
 func start_model_view_camera() -> void:
 	model_view_camera.camera_rotation = Vector2.ZERO

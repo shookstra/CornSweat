@@ -33,7 +33,6 @@
 [ext_resource type="PackedScene" uid="uid://dn3ysg2x0w8gc" path="res://objects/forklift.tscn" id="31_seu75"]
 [ext_resource type="PackedScene" uid="uid://bayd356kihpyu" path="res://objects/cube_1_kg.tscn" id="33_4k2k6"]
 [ext_resource type="PackedScene" uid="uid://dyivbko8a3vwm" path="res://objects/abandoned_house.tscn" id="33_jq2sk"]
-[ext_resource type="PackedScene" uid="uid://blpg3l8h2pa1u" path="res://interactions/CollectableInteraction/ConsumableInteraction/Interactables/item.tscn" id="34_4k2k6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4c57u"]
 sky_top_color = Color(0.06767365, 0.09052234, 0.12095586, 1)
@@ -391,6 +390,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5982995, 9.536743e-07, -25
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.822781, 26.163044, 69.18168)
 size = Vector3(189.04892, 53.278748, 30.221985)
 material = SubResource("FogMaterial_aqe1g")
-
-[node name="Item" parent="." unique_id=1180642099 instance=ExtResource("34_4k2k6")]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -2.4791622, -0.39999998, -250.96098)

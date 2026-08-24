@@ -25,7 +25,7 @@
 [ext_resource type="Resource" uid="uid://dwrvg5h5tuvrj" path="res://player/weapon_manager/weapons/shotgun.tres" id="24_7pqkx"]
 [ext_resource type="Script" uid="uid://ua6j6j42kydy" path="res://ui/ammo_ui.gd" id="24_g4c7l"]
 [ext_resource type="Script" uid="uid://cdrbtsq5s52ea" path="res://player/inventory_controller.gd" id="25_knn7v"]
-[ext_resource type="PackedScene" uid="uid://bnvad8jy4rflu" path="res://player/interaction_controller.tscn" id="26_7pqkx"]
+[ext_resource type="Script" uid="uid://bpbw75vsa7fsn" path="res://player/interaction_controller.gd" id="26_7pqkx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aqe1g"]
 radius = 0.70703125
@@ -56,69 +56,69 @@ script = ExtResource("1")
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="Skeleton3D" parent="CharacterModel/human_female/Armature" parent_id_path=PackedInt32Array(2129502881, 637101310, 1599151005) index="0" unique_id=1828057781]
-bones/0/position = Vector3(-1.7173523, 25.650284, -955.1688)
-bones/0/rotation = Quaternion(-0.7381608, -0.25991437, 0.22181903, 0.5816867)
-bones/1/rotation = Quaternion(0.3964857, 0.069880955, 0.9049385, -0.13784811)
-bones/2/rotation = Quaternion(-0.22362193, -0.0062764017, 0.00190674, 0.9746539)
-bones/3/rotation = Quaternion(0.45954204, 0.04745242, -0.05001241, 0.88547635)
-bones/6/rotation = Quaternion(0.046469923, -0.039738405, 0.99739826, 0.038187534)
-bones/7/rotation = Quaternion(-0.29642266, 0.0049908618, 0.0020597945, 0.9550417)
-bones/8/rotation = Quaternion(0.63245416, 0.08186042, 0.020717364, 0.76998144)
-bones/9/rotation = Quaternion(0.31653923, -0.004743978, 0.0015927894, 0.9485663)
+bones/0/position = Vector3(-2.2781324, 25.744452, -955.9552)
+bones/0/rotation = Quaternion(-0.7377524, -0.25987464, 0.22207563, 0.5821247)
+bones/1/rotation = Quaternion(0.39726275, 0.06833204, 0.9047462, -0.13764969)
+bones/2/rotation = Quaternion(-0.21952474, -0.0014217801, -0.00043772557, 0.9756058)
+bones/3/rotation = Quaternion(0.45794734, 0.043373697, -0.047640577, 0.8866416)
+bones/6/rotation = Quaternion(0.04685466, -0.040724915, 0.99733645, 0.038290054)
+bones/7/rotation = Quaternion(-0.29343137, 0.008858895, 0.0018223705, 0.95593745)
+bones/8/rotation = Quaternion(0.63128996, 0.07882536, 0.02219084, 0.7712115)
+bones/9/rotation = Quaternion(0.31658104, -0.00475063, 0.0015909589, 0.9485523)
 bones/11/position = Vector3(-4.6491623e-06, 90.97977, -12.170436)
-bones/11/rotation = Quaternion(0.0012439565, 2.9867613e-05, -0.0012322855, 0.99999857)
+bones/11/rotation = Quaternion(-0.004461136, -7.263576e-05, 0.00036361974, 0.99999)
 bones/12/position = Vector3(-1.2397766e-05, 107.08822, -2.6702855e-05)
-bones/12/rotation = Quaternion(0.13832656, 0.0006930395, -0.0065016677, 0.99036515)
+bones/12/rotation = Quaternion(0.13466161, 0.0007075853, -0.006006018, 0.9908732)
 bones/13/position = Vector3(-1.9073486e-06, 122.38641, -1.9073525e-06)
-bones/13/rotation = Quaternion(0.13998403, 9.182267e-05, -0.006455736, 0.9901328)
+bones/13/rotation = Quaternion(0.13810188, 0.00021646237, -0.0059755426, 0.9904001)
 bones/14/position = Vector3(55.87627, 126.495766, -1.4483511)
-bones/14/rotation = Quaternion(-0.37536633, -0.2488412, 0.64067036, -0.621868)
+bones/14/rotation = Quaternion(-0.37353268, -0.25070935, 0.64127725, -0.62159604)
 bones/15/position = Vector3(4.2524618e-05, 115.295, 7.46123e-05)
-bones/15/rotation = Quaternion(0.45728642, -0.24719262, 0.19956541, 0.83063745)
+bones/15/rotation = Quaternion(0.4622342, -0.23750888, 0.19639565, 0.8314793)
 bones/16/position = Vector3(0.00021778065, 235.79607, 6.829531e-05)
-bones/16/rotation = Quaternion(0.047715172, 0.017411305, 0.52587956, 0.8490411)
+bones/16/rotation = Quaternion(0.047242068, 0.017317794, 0.5229871, 0.8508543)
 bones/17/position = Vector3(-6.0247516e-05, 219.60008, -6.280599e-05)
-bones/17/rotation = Quaternion(-0.08325976, -0.6269641, -0.27173004, 0.7253596)
+bones/17/rotation = Quaternion(-0.08168313, -0.62884957, -0.26867822, 0.7250436)
 bones/18/position = Vector3(-5.3049258e-05, 66.938576, 1.7409307)
-bones/18/rotation = Quaternion(0.3003804, -0.03147008, 0.08314534, 0.9496674)
+bones/18/rotation = Quaternion(0.3004924, -0.031497236, 0.08323826, 0.949623)
 bones/19/position = Vector3(0.83428097, 44.46083, -9.2493465e-05)
 bones/19/rotation = Quaternion(0.469585, -0.005007894, 0.19247274, 0.8616375)
 bones/20/position = Vector3(0.29498768, 37.015827, -0.00012737888)
 bones/20/rotation = Quaternion(0.23568964, 0.0046135997, 0.08056577, 0.9684722)
 bones/21/position = Vector3(-1.129281, 27.200096, 7.05719e-05)
 bones/22/position = Vector3(-21.99951, 36.828545, -7.355213e-05)
-bones/22/rotation = Quaternion(0.029838696, 0.023536729, 0.05984956, 0.9974837)
+bones/22/rotation = Quaternion(0.02980481, 0.02375014, 0.059495963, 0.9975008)
 bones/23/position = Vector3(-8.088154, 33.352375, 6.23893e-05)
-bones/23/rotation = Quaternion(0.05287955, 0.16750123, -0.040647782, 0.9836132)
+bones/23/rotation = Quaternion(0.052850142, 0.16716027, -0.04082176, 0.9836655)
 bones/24/position = Vector3(1.201807, 34.881413, 7.581164e-05)
 bones/24/rotation = Quaternion(-0.042810887, 0.027230956, 0.063977495, 0.99666077)
 bones/25/position = Vector3(6.886389, 28.880108, 4.768399e-06)
 bones/26/position = Vector3(3.5762787e-06, 137.68506, 2.513691e-05)
-bones/26/rotation = Quaternion(0.070159696, 0.064584196, 0.01163683, 0.99537486)
+bones/26/rotation = Quaternion(0.0712648, 0.06456946, 0.01171582, 0.99529636)
 bones/27/position = Vector3(1.5258789e-05, 69.30498, 18.4594)
-bones/27/rotation = Quaternion(-0.040402498, 0.19199954, 0.08992814, 0.9764307)
+bones/27/rotation = Quaternion(-0.039257247, 0.19203883, 0.089962475, 0.9764665)
 bones/28/position = Vector3(-5.340576e-05, 186.06856, 49.559643)
 bones/29/position = Vector3(-55.876278, 126.50848, -1.5434488)
 bones/29/rotation = Quaternion(0.26590973, -0.31474623, 0.69301814, 0.591568)
 bones/30/position = Vector3(-1.793147e-05, 115.29501, 3.5359626e-05)
-bones/30/rotation = Quaternion(0.52989644, -0.17086339, -0.48965946, 0.6710061)
+bones/30/rotation = Quaternion(0.52934605, -0.17839482, -0.48703927, 0.6713873)
 bones/31/position = Vector3(5.089857e-05, 235.84628, -0.0003029167)
 bones/31/rotation = Quaternion(0.085330196, -0.024584262, -0.7424047, 0.6640405)
 bones/32/position = Vector3(-0.00016744282, 219.57246, 6.500573e-05)
-bones/32/rotation = Quaternion(-0.12939161, 0.110488944, 0.27826598, 0.94531375)
+bones/32/rotation = Quaternion(-0.13134685, 0.1134342, 0.27929235, 0.94439214)
 bones/33/position = Vector3(0.00014059964, 76.32482, 1.9457843)
-bones/33/rotation = Quaternion(0.015203879, 0.004326667, -0.09217521, 0.99561733)
+bones/33/rotation = Quaternion(0.01533921, 0.004330648, -0.09219304, 0.9956136)
 bones/34/position = Vector3(-1.3927155, 41.723038, -8.602369e-05)
 bones/34/rotation = Quaternion(0.26939067, 0.007984241, -0.10134141, 0.9576507)
 bones/35/position = Vector3(-1.0240402, 36.06774, 2.8096692e-06)
 bones/35/rotation = Quaternion(0.3387262, -0.010950887, -0.092183806, 0.9362943)
 bones/36/position = Vector3(2.4168181, 28.446402, -9.75132e-05)
 bones/37/position = Vector3(23.881273, 36.202877, -4.5835848e-05)
-bones/37/rotation = Quaternion(0.118325315, -0.041029353, -0.16401231, 0.9784762)
+bones/37/rotation = Quaternion(0.1174742, -0.041250013, -0.16526482, 0.97835875)
 bones/38/position = Vector3(8.569786, 33.62095, -4.1057774e-05)
-bones/38/rotation = Quaternion(0.026961483, -0.18400654, 0.23792475, 0.9533135)
+bones/38/rotation = Quaternion(0.027014315, -0.18472365, 0.2374107, 0.9533014)
 bones/39/position = Vector3(-0.34012413, 35.081886, 1.4697915e-05)
-bones/39/rotation = Quaternion(0.023975354, -0.00067681127, 0.48943976, 0.8717073)
+bones/39/rotation = Quaternion(0.023415886, -0.00081720634, 0.48969975, 0.8715763)
 bones/40/position = Vector3(-8.229616, 27.586433, -4.386902e-05)
 
 [node name="AnimationTree" parent="CharacterModel/human_female" parent_id_path=PackedInt32Array(2129502881, 637101310) index="2" unique_id=1337558712]
@@ -141,7 +141,7 @@ spot_angle = 60.0
 spot_angle_attenuation = 2.9281716
 
 [node name="RightHandBoneAttachment3D" parent="CharacterModel" index="1" unique_id=840078213]
-transform = Transform3D(0.00071924843, 3.0061543e-05, 0.0018659522, 0.0018472056, 0.0002730805, -0.00071642164, -0.00026554655, 0.0019810407, 7.044105e-05, -0.2766208, 2.6669986, 0.383027)
+transform = Transform3D(0.0007206652, 2.751854e-05, 0.001865445, 0.0018462429, 0.0002771607, -0.0007173357, -0.00026838487, 0.001980511, 7.446665e-05, -0.27291283, 2.670112, 0.37334096)
 
 [node name="RightHand" parent="CharacterModel/RightHandBoneAttachment3D" index="0" unique_id=115520863]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 110, 121, 19)
@@ -180,12 +180,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.335144e-05, 3.683567e-05
 fov = 90.0
 
 [node name="InteractionRayCast3D" type="RayCast3D" parent="Camera/EdgeSpringArm3D/RearSpringArm3D/Camera3D" unique_id=1435231543]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 7.6293945e-06)
 target_position = Vector3(10, -1, 0)
+debug_shape_custom_color = Color(1, 0, 0, 1)
 debug_shape_thickness = 5
 
 [node name="Hand" type="Marker3D" parent="Camera/EdgeSpringArm3D/RearSpringArm3D/Camera3D" unique_id=1260900443]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+
+[node name="FloorRaycast" type="RayCast3D" parent="." unique_id=1548788488]
+target_position = Vector3(0, -0.5, 0)
+
+[node name="WeaponManager" type="Node3D" parent="." unique_id=165068207 node_paths=PackedStringArray("weapon_status_timer", "camera", "flashlight")]
+script = ExtResource("21_x7c3f")
+weapons = Array[ExtResource("22_g4c7l")]([ExtResource("23_knn7v"), ExtResource("24_7pqkx")])
+weapon_status_timer = NodePath("WeaponStatusTimer")
+camera = NodePath("../Camera/EdgeSpringArm3D/RearSpringArm3D/Camera3D")
+flashlight = NodePath("../CharacterModel/human_female/Flashlight")
+
+[node name="WeaponStatusTimer" type="Timer" parent="WeaponManager" unique_id=1673952731]
+wait_time = 2.0
+one_shot = true
 
 [node name="StateMachine" type="Node" parent="." unique_id=1036717628 node_paths=PackedStringArray("weapon_manager", "start_state")]
 script = ExtResource("5_e7oew")
@@ -294,19 +309,14 @@ on_enter_animation = "jump"
 script = ExtResource("8_2ieo8")
 on_enter_animation = "run"
 
-[node name="FloorRaycast" type="RayCast3D" parent="." unique_id=1548788488]
-target_position = Vector3(0, -0.5, 0)
+[node name="InventoryController" type="Node" parent="." unique_id=1304458979]
+script = ExtResource("25_knn7v")
 
-[node name="WeaponManager" type="Node3D" parent="." unique_id=165068207 node_paths=PackedStringArray("weapon_status_timer", "camera", "flashlight")]
-script = ExtResource("21_x7c3f")
-weapons = Array[ExtResource("22_g4c7l")]([ExtResource("23_knn7v"), ExtResource("24_7pqkx")])
-weapon_status_timer = NodePath("WeaponStatusTimer")
+[node name="InteractionController" type="Node" parent="." unique_id=324410130 node_paths=PackedStringArray("interaction_raycast", "camera", "interaction_label")]
+script = ExtResource("26_7pqkx")
+interaction_raycast = NodePath("../Camera/EdgeSpringArm3D/RearSpringArm3D/Camera3D/InteractionRayCast3D")
 camera = NodePath("../Camera/EdgeSpringArm3D/RearSpringArm3D/Camera3D")
-flashlight = NodePath("../CharacterModel/human_female/Flashlight")
-
-[node name="WeaponStatusTimer" type="Timer" parent="WeaponManager" unique_id=1673952731]
-wait_time = 2.0
-one_shot = true
+interaction_label = NodePath("../UI/InteractUI/InteractionLabel")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1464839407]
 
@@ -344,19 +354,6 @@ text = "/"
 layout_mode = 2
 text = "24"
 
-[node name="Reticle" type="CenterContainer" parent="UI/AmmoUI" unique_id=2002176636]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("14_kb6p2")
-
-[node name="ColorRect" type="ColorRect" parent="UI/AmmoUI/Reticle" unique_id=550797040]
-custom_minimum_size = Vector2(2, 2)
-layout_mode = 2
-
 [node name="InteractUI" type="Control" parent="UI" unique_id=385160349]
 layout_mode = 3
 anchors_preset = 15
@@ -365,6 +362,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_lock_ = true
+
+[node name="Reticle" type="CenterContainer" parent="UI/InteractUI" unique_id=2002176636]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("14_kb6p2")
+
+[node name="ColorRect" type="ColorRect" parent="UI/InteractUI/Reticle" unique_id=550797040]
+custom_minimum_size = Vector2(2, 2)
+layout_mode = 2
 
 [node name="InteractionLabel" type="Label" parent="UI/InteractUI" unique_id=991697050]
 layout_mode = 1
@@ -386,6 +396,7 @@ vertical_alignment = 1
 metadata/_edit_lock_ = true
 
 [node name="InventoryUI" type="Control" parent="UI" unique_id=1844309753]
+visible = false
 top_level = true
 z_index = 10
 layout_mode = 3
@@ -427,15 +438,16 @@ z_index = 4
 layout_mode = 2
 columns = 5
 
-[node name="InventoryController" type="Node" parent="." unique_id=1304458979 node_paths=PackedStringArray("inventory_ui", "camera", "interaction_raycat")]
-script = ExtResource("25_knn7v")
-inventory_ui = NodePath("../UI/InventoryUI")
-camera = NodePath("../Camera")
-interaction_raycat = NodePath("../Camera/EdgeSpringArm3D/RearSpringArm3D/Camera3D/InteractionRayCast3D")
-
-[node name="InteractionController" parent="." unique_id=266378230 instance=ExtResource("26_7pqkx")]
-
 [connection signal="camera_rotated" from="Camera" to="CharacterModel" method="_on_camera_camera_rotated"]
+[connection signal="ammo_updated" from="WeaponManager" to="UI/AmmoUI" method="_on_weapon_manager_ammo_updated"]
+[connection signal="weapon_changed" from="WeaponManager" to="CharacterModel" method="_on_weapon_manager_weapon_changed"]
+[connection signal="weapon_fired" from="WeaponManager" to="CharacterModel" method="_on_weapon_manager_weapon_fired"]
+[connection signal="weapon_manager_finished" from="WeaponManager" to="CharacterModel" method="_on_weapon_manager_weapon_manager_finished"]
+[connection signal="weapon_manager_finished" from="WeaponManager" to="UI/AmmoUI" method="_on_weapon_manager_weapon_manager_finished"]
+[connection signal="weapon_manager_started" from="WeaponManager" to="CharacterModel" method="_on_weapon_manager_weapon_manager_started"]
+[connection signal="weapon_manager_started" from="WeaponManager" to="UI/AmmoUI" method="_on_weapon_manager_weapon_manager_started"]
+[connection signal="weapon_reloaded" from="WeaponManager" to="CharacterModel" method="_on_weapon_manager_weapon_reloaded"]
+[connection signal="timeout" from="WeaponManager/WeaponStatusTimer" to="WeaponManager" method="_on_weapon_status_timer_timeout"]
 [connection signal="aim_entered" from="StateMachine/Unarmed/UnarmedStateMachine/AimIdle" to="Camera" method="_on_aim_entered"]
 [connection signal="aim_exited" from="StateMachine/Unarmed/UnarmedStateMachine/AimIdle" to="Camera" method="_on_aim_exited"]
 [connection signal="aim_entered" from="StateMachine/Unarmed/UnarmedStateMachine/AimWalk" to="Camera" method="_on_aim_entered"]
@@ -447,15 +459,6 @@ interaction_raycat = NodePath("../Camera/EdgeSpringArm3D/RearSpringArm3D/Camera3
 [connection signal="aim_exited" from="StateMachine/Armed/ArmedStateMachine/AimIdle" to="Camera" method="_on_aim_exited"]
 [connection signal="aim_entered" from="StateMachine/Armed/ArmedStateMachine/AimWalk" to="Camera" method="_on_aim_entered"]
 [connection signal="aim_exited" from="StateMachine/Armed/ArmedStateMachine/AimWalk" to="Camera" method="_on_aim_exited"]
-[connection signal="ammo_updated" from="WeaponManager" to="UI/AmmoUI" method="_on_weapon_manager_ammo_updated"]
-[connection signal="weapon_changed" from="WeaponManager" to="CharacterModel" method="_on_weapon_manager_weapon_changed"]
-[connection signal="weapon_fired" from="WeaponManager" to="CharacterModel" method="_on_weapon_manager_weapon_fired"]
-[connection signal="weapon_manager_finished" from="WeaponManager" to="CharacterModel" method="_on_weapon_manager_weapon_manager_finished"]
-[connection signal="weapon_manager_finished" from="WeaponManager" to="UI/AmmoUI" method="_on_weapon_manager_weapon_manager_finished"]
-[connection signal="weapon_manager_started" from="WeaponManager" to="CharacterModel" method="_on_weapon_manager_weapon_manager_started"]
-[connection signal="weapon_manager_started" from="WeaponManager" to="UI/AmmoUI" method="_on_weapon_manager_weapon_manager_started"]
-[connection signal="weapon_reloaded" from="WeaponManager" to="CharacterModel" method="_on_weapon_manager_weapon_reloaded"]
-[connection signal="timeout" from="WeaponManager/WeaponStatusTimer" to="WeaponManager" method="_on_weapon_status_timer_timeout"]
 
 [editable path="CharacterModel"]
 [editable path="CharacterModel/human_female"]

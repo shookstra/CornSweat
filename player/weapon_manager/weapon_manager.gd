@@ -127,7 +127,6 @@ func calculate_reload() -> void:
 func _on_weapon_status_timer_timeout() -> void:
 	set_weapon_manager_status(WeaponManagerStatus.AVAILABLE)
 
-
 func perform_hitscan() -> void:
 	if not camera:
 		print("no camera assigned!")
@@ -136,7 +135,7 @@ func perform_hitscan() -> void:
 	var space_state = camera.get_world_3d().direct_space_state
 	var from = camera.global_position
 	var forward = -camera.global_transform.basis.z
-	var to = from + forward * current_weapon.range
+	var to = from + forward * current_weapon.weapon_range
 	
 	var query = PhysicsRayQueryParameters3D.create(from, to)
 	var result = space_state.intersect_ray(query)
