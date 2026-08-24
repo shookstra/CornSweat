@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcxwxmlg4ogps"
-path.s3tc="res://.godot/imported/grass_01.png-74b5258ba19d9e2c43ac0e154cd57698.s3tc.ctex"
+uid="uid://cxhq7id1wytjr"
+path.s3tc="res://.godot/imported/low-poly_industrial_forklift_with_a_retro_ps1_0.png-8f009f4c697cc4b6de37e96f46b99d7c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "abb17cb0263a67f2193e2aafdeb1df05"
+}
 
 [deps]
 
-source_file="res://assets/textures/grass_01.png"
-dest_files=["res://.godot/imported/grass_01.png-74b5258ba19d9e2c43ac0e154cd57698.s3tc.ctex"]
+source_file="res://assets/models/low-poly_industrial_forklift_with_a_retro_ps1_0.png"
+dest_files=["res://.godot/imported/low-poly_industrial_forklift_with_a_retro_ps1_0.png-8f009f4c697cc4b6de37e96f46b99d7c.s3tc.ctex"]
 
 [params]
 

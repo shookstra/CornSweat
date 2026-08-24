@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dy8ohayjshrdh"]
+
+[ext_resource type="Texture2D" uid="uid://bcxwxmlg4ogps" path="res://assets/textures/grass_01.png" id="1_jbgt3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yg5ta"]
+albedo_texture = ExtResource("1_jbgt3")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_aqe1g"]
+material = SubResource("StandardMaterial3D_yg5ta")
+size = Vector2(1, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jbgt3"]
+data = PackedVector3Array(0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5)
+
+[node name="Node3D" type="MeshInstance3D" unique_id=1562585281]
+mesh = SubResource("PlaneMesh_aqe1g")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2012215767]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=439176639]
+shape = SubResource("ConcavePolygonShape3D_jbgt3")

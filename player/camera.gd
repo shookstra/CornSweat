@@ -1,7 +1,7 @@
 extends Node3D
 
 signal camera_rotated(_rotation: Vector2)
-signal model_view_changed(view: bool)
+#signal model_view_changed(view: bool)
 
 @export var character: CharacterBody3D
 @export var edge_spring_arm: SpringArm3D
@@ -9,7 +9,10 @@ signal model_view_changed(view: bool)
 @export var camera: Camera3D
 @export var model: Node3D
 @export var model_view_camera: Camera3D
+@export var interaction_raycast: RayCast3D
+@export var interaction_label: Label
 
+@export var inventory_ui: Control
 @export var camera_alignment_speed: float = 0.2
 @export var aim_rear_spring_length: float = 0.5
 @export var aim_edge_spring_length: float = 0.5
@@ -49,16 +52,23 @@ func _input(event: InputEvent) -> void:
 					Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 					
 			if event is InputEventMouseMotion:
-				var mouse_event: Vector2 = event.screen_relative * mouse_sensitivity
-				camera_look(mouse_event)
+				if !inventory_ui.visible:
+					var mouse_event: Vector2 = event.screen_relative * mouse_sensitivity
+					camera_look(mouse_event)
 				
-			if event.is_action_pressed("swap_camera_alignment"):
-				swap_camera_alignment()
+					if event.is_action_pressed("swap_camera_alignment"):
+						swap_camera_alignment()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if current_view == View.GAME:
 		model_view_camera.global_transform = camera.global_transform
 		model_view_camera.global_rotation = camera.global_rotation
+		
+	if interaction_raycast.is_colliding():
+		var collision_object = interaction_raycast.get_collider()
+		interaction_label.text = collision_object.name
+	else:
+		interaction_label.text = ""
 
 func start_model_view_camera() -> void:
 	model_view_camera.camera_rotation = Vector2.ZERO

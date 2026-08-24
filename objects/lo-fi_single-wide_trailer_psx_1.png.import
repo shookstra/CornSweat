@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcxwxmlg4ogps"
-path.s3tc="res://.godot/imported/grass_01.png-74b5258ba19d9e2c43ac0e154cd57698.s3tc.ctex"
+uid="uid://bmpnwih7jt4oc"
+path.s3tc="res://.godot/imported/lo-fi_single-wide_trailer_psx_1.png-3e739e8e96b283be71055839af9ac71b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "09f7dcbb0273fa3107e303297608686c"
+}
 
 [deps]
 
-source_file="res://assets/textures/grass_01.png"
-dest_files=["res://.godot/imported/grass_01.png-74b5258ba19d9e2c43ac0e154cd57698.s3tc.ctex"]
+source_file="res://objects/lo-fi_single-wide_trailer_psx_1.png"
+dest_files=["res://.godot/imported/lo-fi_single-wide_trailer_psx_1.png-3e739e8e96b283be71055839af9ac71b.s3tc.ctex"]
 
 [params]
 

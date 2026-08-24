@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcxwxmlg4ogps"
-path.s3tc="res://.godot/imported/grass_01.png-74b5258ba19d9e2c43ac0e154cd57698.s3tc.ctex"
+uid="uid://qaqqlya8adwo"
+path.s3tc="res://.godot/imported/BrickBuilding_brick_buillding_front_lowres.png-24c6ed2c4647a029f5d92cd2dc2a4f86.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "8a41742bd35e7d86bcffe35538b66059"
+}
 
 [deps]
 
-source_file="res://assets/textures/grass_01.png"
-dest_files=["res://.godot/imported/grass_01.png-74b5258ba19d9e2c43ac0e154cd57698.s3tc.ctex"]
+source_file="res://assets/models/BrickBuilding_brick_buillding_front_lowres.png"
+dest_files=["res://.godot/imported/BrickBuilding_brick_buillding_front_lowres.png-24c6ed2c4647a029f5d92cd2dc2a4f86.s3tc.ctex"]
 
 [params]
 

@@ -82,7 +82,7 @@ func remove_weapon_attachment() -> void:
 		current_weapon_attachment.queue_free()
 
 
-func _on_weapon_manager_weapon_manager_finished(status: String, weapons_is_empty: bool) -> void:
+func _on_weapon_manager_weapon_manager_finished(status: String, _weapons_is_empty: bool) -> void:
 	if animation_tree["parameters/combat_transition/current_state"] == status:
 		return
 	on_combat_status_changed(status)
