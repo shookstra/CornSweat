@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="Dialogue" format=3 uid="uid://weh6aoue741t"]
+
+[ext_resource type="Script" uid="uid://k1ubvrrpfg74" path="res://ui/dialogue/base/statement.gd" id="1_124xo"]
+[ext_resource type="Script" uid="uid://bggp16d6qxmjy" path="res://ui/dialogue/base/dialogue.gd" id="2_60k3u"]
+
+[sub_resource type="Resource" id="Resource_ttedh"]
+script = ExtResource("1_124xo")
+speaker_name = "Irva"
+speaker_text = "..."
+metadata/_custom_type_script = "uid://k1ubvrrpfg74"
+
+[sub_resource type="Resource" id="Resource_124xo"]
+script = ExtResource("1_124xo")
+speaker_name = "Irva"
+speaker_text = "What are you doing here...?"
+metadata/_custom_type_script = "uid://k1ubvrrpfg74"
+
+[sub_resource type="Resource" id="Resource_t4h14"]
+script = ExtResource("1_124xo")
+speaker_name = "Irva"
+speaker_text = "You shouldn't be here..."
+metadata/_custom_type_script = "uid://k1ubvrrpfg74"
+
+[sub_resource type="Resource" id="Resource_nyjly"]
+script = ExtResource("1_124xo")
+speaker_name = "Irva"
+speaker_text = "You need to leave here now..."
+metadata/_custom_type_script = "uid://k1ubvrrpfg74"
+
+[resource]
+script = ExtResource("2_60k3u")
+dialogue = Array[ExtResource("1_124xo")]([SubResource("Resource_ttedh"), SubResource("Resource_124xo"), SubResource("Resource_t4h14"), SubResource("Resource_nyjly")])
+text_scroll_speed = 0.01
+metadata/_custom_type_script = "uid://bggp16d6qxmjy"

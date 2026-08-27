@@ -25,6 +25,7 @@
 [ext_resource type="Resource" uid="uid://dwrvg5h5tuvrj" path="res://player/weapon_manager/weapons/shotgun.tres" id="24_7pqkx"]
 [ext_resource type="Script" uid="uid://ua6j6j42kydy" path="res://ui/ammo_ui.gd" id="24_g4c7l"]
 [ext_resource type="Script" uid="uid://cdrbtsq5s52ea" path="res://player/inventory_controller.gd" id="25_knn7v"]
+[ext_resource type="PackedScene" uid="uid://bvug5y5xdk8so" path="res://ui/dialogue/base/dialogue_ui.tscn" id="25_uw77l"]
 [ext_resource type="Script" uid="uid://bpbw75vsa7fsn" path="res://player/interaction_controller.gd" id="26_7pqkx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aqe1g"]
@@ -34,9 +35,6 @@ height = 3.391945
 [sub_resource type="SphereShape3D" id="SphereShape3D_rkbax"]
 radius = 0.1
 
-[sub_resource type="LabelSettings" id="LabelSettings_knn7v"]
-font_size = 12
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4c7l"]
 bg_color = Color(0.2627451, 0.20392157, 0.33333334, 1)
 border_width_left = 1
@@ -44,6 +42,9 @@ border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 corner_detail = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_knn7v"]
+font_size = 12
 
 [node name="Player" type="CharacterBody3D" unique_id=1917848421]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
@@ -56,69 +57,69 @@ script = ExtResource("1")
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="Skeleton3D" parent="CharacterModel/human_female/Armature" parent_id_path=PackedInt32Array(2129502881, 637101310, 1599151005) index="0" unique_id=1828057781]
-bones/0/position = Vector3(-1.9177407, 23.753782, -956.52527)
-bones/0/rotation = Quaternion(-0.7390549, -0.2577204, 0.22354846, 0.5808649)
-bones/1/rotation = Quaternion(0.39623967, 0.06409601, 0.9061948, -0.13303033)
-bones/2/rotation = Quaternion(-0.21207714, -0.004833588, 0.00092775846, 0.97724056)
-bones/3/rotation = Quaternion(0.45360142, 0.04479712, -0.048720963, 0.8887437)
-bones/6/rotation = Quaternion(0.047476165, -0.040441383, 0.99723303, 0.04045813)
-bones/7/rotation = Quaternion(-0.2943058, 0.009300772, 0.0014694325, 0.95566493)
-bones/8/rotation = Quaternion(0.6309419, 0.079538934, 0.02175642, 0.7714354)
-bones/9/rotation = Quaternion(0.31683484, -0.0047909734, 0.0015797478, 0.9484674)
+bones/0/position = Vector3(-2.6130648, 25.072584, -957.1431)
+bones/0/rotation = Quaternion(-0.7379936, -0.25853837, 0.22325458, 0.5819629)
+bones/1/rotation = Quaternion(0.39749056, 0.06420322, 0.9054852, -0.13407403)
+bones/2/rotation = Quaternion(-0.21107115, -0.0035658865, 0.0002143927, 0.9774642)
+bones/3/rotation = Quaternion(0.45377868, 0.044155873, -0.048403475, 0.8887026)
+bones/6/rotation = Quaternion(0.04750619, -0.041743428, 0.99720335, 0.03982687)
+bones/7/rotation = Quaternion(-0.29103082, 0.010472141, 0.0017711152, 0.95665485)
+bones/8/rotation = Quaternion(0.6300334, 0.07813239, 0.022325149, 0.7723049)
+bones/9/rotation = Quaternion(0.31687772, -0.0047978302, 0.0015779295, 0.94845307)
 bones/11/position = Vector3(-4.6491623e-06, 90.97977, -12.170436)
-bones/11/rotation = Quaternion(-0.011739131, -0.00018333591, 0.0014205951, 0.9999301)
+bones/11/rotation = Quaternion(-0.011328581, -0.00031174166, 0.001436103, 0.99993485)
 bones/12/position = Vector3(-1.2397766e-05, 107.08822, -2.6702855e-05)
-bones/12/rotation = Quaternion(0.1369282, 0.0007403806, -0.0051248414, 0.99056745)
+bones/12/rotation = Quaternion(0.13373224, 0.00073263544, -0.005111681, 0.9910041)
 bones/13/position = Vector3(-1.9073486e-06, 122.38641, -1.9073525e-06)
-bones/13/rotation = Quaternion(0.14077593, 0.0004264795, -0.005115465, 0.99002826)
+bones/13/rotation = Quaternion(0.13822338, 0.00042209108, -0.0050809267, 0.990388)
 bones/14/position = Vector3(55.87627, 126.495766, -1.4483511)
-bones/14/rotation = Quaternion(-0.37272063, -0.25159994, 0.6420362, -0.6209399)
+bones/14/rotation = Quaternion(-0.3719099, -0.25240725, 0.6414273, -0.6217271)
 bones/15/position = Vector3(4.2524618e-05, 115.295, 7.46123e-05)
-bones/15/rotation = Quaternion(0.46580938, -0.23004426, 0.1934356, 0.83227646)
+bones/15/rotation = Quaternion(0.4669162, -0.22780941, 0.19213662, 0.8325718)
 bones/16/position = Vector3(0.00021778065, 235.79607, 6.829531e-05)
-bones/16/rotation = Quaternion(0.046671245, 0.01720531, 0.5194958, 0.8530241)
+bones/16/rotation = Quaternion(0.046730988, 0.017217163, 0.5198601, 0.8527985)
 bones/17/position = Vector3(-6.0247516e-05, 219.60008, -6.280599e-05)
-bones/17/rotation = Quaternion(-0.08004659, -0.6350012, -0.26324406, 0.7218508)
+bones/17/rotation = Quaternion(-0.08004452, -0.6339531, -0.2636976, 0.72260636)
 bones/18/position = Vector3(-5.3049258e-05, 66.938576, 1.7409307)
-bones/18/rotation = Quaternion(0.30082816, -0.031578645, 0.08351679, 0.9494894)
+bones/18/rotation = Quaternion(0.3006922, -0.031545684, 0.08340401, 0.94954354)
 bones/19/position = Vector3(0.83428097, 44.46083, -9.2493465e-05)
 bones/19/rotation = Quaternion(0.469585, -0.005007894, 0.19247274, 0.8616375)
 bones/20/position = Vector3(0.29498768, 37.015827, -0.00012737888)
 bones/20/rotation = Quaternion(0.23568964, 0.0046135997, 0.08056577, 0.9684722)
 bones/21/position = Vector3(-1.129281, 27.200096, 7.05719e-05)
 bones/22/position = Vector3(-21.99951, 36.828545, -7.355213e-05)
-bones/22/rotation = Quaternion(0.030231817, 0.023580391, 0.058613844, 0.9975443)
+bones/22/rotation = Quaternion(0.030029535, 0.024083365, 0.05885081, 0.9975244)
 bones/23/position = Vector3(-8.088154, 33.352375, 6.23893e-05)
-bones/23/rotation = Quaternion(0.052761942, 0.16613787, -0.04134343, 0.98382175)
+bones/23/rotation = Quaternion(0.05279767, 0.16655195, -0.041132182, 0.9837587)
 bones/24/position = Vector3(1.201807, 34.881413, 7.581164e-05)
 bones/24/rotation = Quaternion(-0.042810887, 0.027230956, 0.063977495, 0.99666077)
 bones/25/position = Vector3(6.886389, 28.880108, 4.768399e-06)
 bones/26/position = Vector3(3.5762787e-06, 137.68506, 2.513691e-05)
-bones/26/rotation = Quaternion(0.07502175, 0.06450298, 0.0121516995, 0.9950194)
+bones/26/rotation = Quaternion(0.07418894, 0.064515784, 0.012059064, 0.99508214)
 bones/27/position = Vector3(1.5258789e-05, 69.30498, 18.4594)
-bones/27/rotation = Quaternion(-0.02610592, 0.191051, 0.091753505, 0.9769336)
+bones/27/rotation = Quaternion(-0.031523585, 0.19153461, 0.09095811, 0.9767536)
 bones/28/position = Vector3(-5.340576e-05, 186.06856, 49.559643)
 bones/29/position = Vector3(-55.876278, 126.50848, -1.5434488)
 bones/29/rotation = Quaternion(0.26590973, -0.31474623, 0.69301814, 0.591568)
 bones/30/position = Vector3(-1.793147e-05, 115.29501, 3.5359626e-05)
-bones/30/rotation = Quaternion(0.5290455, -0.18156187, -0.4855512, 0.67185277)
+bones/30/rotation = Quaternion(0.5288621, -0.18431044, -0.4848053, 0.6717874)
 bones/31/position = Vector3(5.089857e-05, 235.84628, -0.0003029167)
 bones/31/rotation = Quaternion(0.085330196, -0.024584262, -0.7424047, 0.6640405)
 bones/32/position = Vector3(-0.00016744282, 219.57246, 6.500573e-05)
-bones/32/rotation = Quaternion(-0.12668546, 0.11204972, 0.28461975, 0.9436034)
+bones/32/rotation = Quaternion(-0.1296457, 0.114429325, 0.28303525, 0.9433923)
 bones/33/position = Vector3(0.00014059964, 76.32482, 1.9457843)
-bones/33/rotation = Quaternion(0.015744962, 0.0043425886, -0.09224646, 0.9956023)
+bones/33/rotation = Quaternion(0.015580652, 0.0043377546, -0.09222484, 0.9956069)
 bones/34/position = Vector3(-1.3927155, 41.723038, -8.602369e-05)
 bones/34/rotation = Quaternion(0.26939067, 0.007984241, -0.10134141, 0.9576507)
 bones/35/position = Vector3(-1.0240402, 36.06774, 2.8096692e-06)
 bones/35/rotation = Quaternion(0.3387262, -0.010950887, -0.092183806, 0.9362943)
 bones/36/position = Vector3(2.4168181, 28.446402, -9.75132e-05)
 bones/37/position = Vector3(23.881273, 36.202877, -4.5835848e-05)
-bones/37/rotation = Quaternion(0.119931325, -0.040694665, -0.16157949, 0.9786994)
+bones/37/rotation = Quaternion(0.11910791, -0.04088273, -0.16290595, 0.97857225)
 bones/38/position = Vector3(8.569786, 33.62095, -4.1057774e-05)
-bones/38/rotation = Quaternion(0.026913276, -0.18368949, 0.23817158, 0.9533143)
+bones/38/rotation = Quaternion(0.026961485, -0.18416798, 0.23782033, 0.9533084)
 bones/39/position = Vector3(-0.34012413, 35.081886, 1.4697915e-05)
-bones/39/rotation = Quaternion(0.023471741, -0.0008040466, 0.48967355, 0.8715896)
+bones/39/rotation = Quaternion(0.023117423, -0.0008924914, 0.4898381, 0.8715065)
 bones/40/position = Vector3(-8.229616, 27.586433, -4.386902e-05)
 
 [node name="AnimationTree" parent="CharacterModel/human_female" parent_id_path=PackedInt32Array(2129502881, 637101310) index="2" unique_id=1337558712]
@@ -141,7 +142,7 @@ spot_range = 100.0
 spot_angle = 60.0
 
 [node name="RightHandBoneAttachment3D" parent="CharacterModel" index="1" unique_id=840078213]
-transform = Transform3D(0.0007218804, 3.318801e-05, 0.0018648825, 0.0018474599, 0.00026225238, -0.00071980356, -0.00025647986, 0.001982453, 6.400025e-05, -0.27205792, 2.6694956, 0.35937023)
+transform = Transform3D(0.00072133477, 2.8652757e-05, 0.0018651693, 0.0018469946, 0.00026917428, -0.00071844057, -0.00026132105, 0.0019815962, 7.06213e-05, -0.2714202, 2.6721098, 0.3616051)
 
 [node name="RightHand" parent="CharacterModel/RightHandBoneAttachment3D" index="0" unique_id=115520863]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 110, 121, 19)
@@ -156,10 +157,10 @@ script = ExtResource("2_rkbax")
 character = NodePath("..")
 edge_spring_arm = NodePath("EdgeSpringArm3D")
 rear_spring_arm = NodePath("EdgeSpringArm3D/RearSpringArm3D")
-camera = NodePath("EdgeSpringArm3D/RearSpringArm3D/Camera3D")
+camera = NodePath("EdgeSpringArm3D/RearSpringArm3D/PlayerCamera3D")
 model = NodePath("../CharacterModel")
-model_view_camera = NodePath("EdgeSpringArm3D/RearSpringArm3D/Camera3D")
-interaction_raycast = NodePath("EdgeSpringArm3D/RearSpringArm3D/Camera3D/InteractionRayCast3D")
+model_view_camera = NodePath("EdgeSpringArm3D/RearSpringArm3D/PlayerCamera3D")
+interaction_raycast = NodePath("EdgeSpringArm3D/RearSpringArm3D/PlayerCamera3D/InteractionRayCast3D")
 interaction_label = NodePath("../UI/InteractUI/InteractionLabel")
 inventory_ui = NodePath("../UI/InventoryUI")
 aim_rear_spring_length = 0.7
@@ -175,17 +176,18 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 1
 shape = SubResource("SphereShape3D_rkbax")
 spring_length = 3.0
 
-[node name="Camera3D" type="Camera3D" parent="Camera/EdgeSpringArm3D/RearSpringArm3D" unique_id=815236964]
+[node name="PlayerCamera3D" type="Camera3D" parent="Camera/EdgeSpringArm3D/RearSpringArm3D" unique_id=815236964]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.335144e-05, 3.683567e-05)
 fov = 90.0
 
-[node name="InteractionRayCast3D" type="RayCast3D" parent="Camera/EdgeSpringArm3D/RearSpringArm3D/Camera3D" unique_id=1435231543]
+[node name="InteractionRayCast3D" type="RayCast3D" parent="Camera/EdgeSpringArm3D/RearSpringArm3D/PlayerCamera3D" unique_id=1435231543]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 7.6293945e-06)
 target_position = Vector3(10, -1, 0)
 debug_shape_custom_color = Color(1, 0, 0, 1)
 debug_shape_thickness = 5
 
-[node name="Hand" type="Marker3D" parent="Camera/EdgeSpringArm3D/RearSpringArm3D/Camera3D" unique_id=1260900443]
+[node name="Hand" type="Marker3D" parent="Camera/EdgeSpringArm3D/RearSpringArm3D/PlayerCamera3D" unique_id=1260900443]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
 
 [node name="FloorRaycast" type="RayCast3D" parent="." unique_id=1548788488]
@@ -195,7 +197,7 @@ target_position = Vector3(0, -0.5, 0)
 script = ExtResource("21_x7c3f")
 weapons = Array[ExtResource("22_g4c7l")]([ExtResource("23_knn7v"), ExtResource("24_7pqkx")])
 weapon_status_timer = NodePath("WeaponStatusTimer")
-camera = NodePath("../Camera/EdgeSpringArm3D/RearSpringArm3D/Camera3D")
+camera = NodePath("../Camera/EdgeSpringArm3D/RearSpringArm3D/PlayerCamera3D")
 
 [node name="WeaponStatusTimer" type="Timer" parent="WeaponManager" unique_id=1673952731]
 wait_time = 2.0
@@ -315,11 +317,55 @@ flashlight = NodePath("../CharacterModel/human_female/Flashlight")
 
 [node name="InteractionController" type="Node" parent="." unique_id=324410130 node_paths=PackedStringArray("interaction_raycast", "camera", "interaction_label")]
 script = ExtResource("26_7pqkx")
-interaction_raycast = NodePath("../Camera/EdgeSpringArm3D/RearSpringArm3D/Camera3D/InteractionRayCast3D")
-camera = NodePath("../Camera/EdgeSpringArm3D/RearSpringArm3D/Camera3D")
+interaction_raycast = NodePath("../Camera/EdgeSpringArm3D/RearSpringArm3D/PlayerCamera3D/InteractionRayCast3D")
+camera = NodePath("../Camera/EdgeSpringArm3D/RearSpringArm3D/PlayerCamera3D")
 interaction_label = NodePath("../UI/InteractUI/InteractionLabel")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1464839407]
+
+[node name="InventoryUI" type="Control" parent="UI" unique_id=1844309753]
+visible = false
+top_level = true
+z_index = 11
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="UI/InventoryUI" unique_id=1545437279]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.5
+offset_top = -15.0
+offset_right = 62.5
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4c7l")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/InventoryUI/Panel" unique_id=1792805435]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="GridContainer" type="GridContainer" parent="UI/InventoryUI/Panel/MarginContainer" unique_id=477544326]
+unique_name_in_owner = true
+z_index = 4
+layout_mode = 2
+columns = 5
 
 [node name="AmmoUI" type="Control" parent="UI" unique_id=825847444]
 layout_mode = 3
@@ -396,50 +442,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="InventoryUI" type="Control" parent="UI" unique_id=1844309753]
+[node name="DialogueUI" parent="UI" unique_id=1422650059 instance=ExtResource("25_uw77l")]
 visible = false
-top_level = true
-z_index = 10
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="UI/InventoryUI" unique_id=1545437279]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -62.5
-offset_top = -15.0
-offset_right = 62.5
-offset_bottom = 15.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_g4c7l")
-
-[node name="MarginContainer" type="MarginContainer" parent="UI/InventoryUI/Panel" unique_id=1792805435]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="GridContainer" type="GridContainer" parent="UI/InventoryUI/Panel/MarginContainer" unique_id=477544326]
-unique_name_in_owner = true
-z_index = 4
-layout_mode = 2
-columns = 5
-
+[connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="camera_rotated" from="Camera" to="CharacterModel" method="_on_camera_camera_rotated"]
 [connection signal="ammo_updated" from="WeaponManager" to="UI/AmmoUI" method="_on_weapon_manager_ammo_updated"]
 [connection signal="weapon_changed" from="WeaponManager" to="CharacterModel" method="_on_weapon_manager_weapon_changed"]

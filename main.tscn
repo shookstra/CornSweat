@@ -28,15 +28,18 @@
 [ext_resource type="PackedScene" uid="uid://bpvio23gybeem" path="res://objects/bathrooms.tscn" id="22_ryguw"]
 [ext_resource type="PackedScene" uid="uid://c1qbcbh24ehrm" path="res://objects/trailer.tscn" id="23_d13ii"]
 [ext_resource type="PackedScene" uid="uid://ddx35qn3m4had" path="res://objects/woman_8.tscn" id="23_facbu"]
+[ext_resource type="PackedScene" uid="uid://cxtb51dkmbjv5" path="res://ui/dialogue/base/dialogue_trigger.tscn" id="24_b1qrp"]
 [ext_resource type="PackedScene" uid="uid://cusljxv5sbq4q" path="res://objects/dead_body_in_plastic.tscn" id="24_htxhm"]
 [ext_resource type="PackedScene" uid="uid://wddmr1gnaeoh" path="res://objects/church.tscn" id="25_0odxb"]
+[ext_resource type="Resource" uid="uid://weh6aoue741t" path="res://ui/dialogue/Irva/irva_dialogue.tres" id="25_h8e4i"]
 [ext_resource type="PackedScene" uid="uid://njbvdpxt34v7" path="res://objects/house1.tscn" id="26_lswn8"]
 [ext_resource type="PackedScene" uid="uid://dkp7ioh6sxhj1" path="res://objects/flickering_omni_light.tscn" id="27_a6jrf"]
 [ext_resource type="PackedScene" uid="uid://buiit1buek3it" path="res://objects/house2.tscn" id="29_qsp4k"]
 [ext_resource type="PackedScene" uid="uid://dn3ysg2x0w8gc" path="res://objects/forklift.tscn" id="31_seu75"]
-[ext_resource type="PackedScene" uid="uid://bayd356kihpyu" path="res://objects/cube_1_kg.tscn" id="33_4k2k6"]
 [ext_resource type="PackedScene" uid="uid://dyivbko8a3vwm" path="res://objects/abandoned_house.tscn" id="33_jq2sk"]
 [ext_resource type="PackedScene" uid="uid://cpokgsdh2ipdt" path="res://interactions/interactables/flashlight/Flashlight.tscn" id="35_0rl1p"]
+[ext_resource type="PackedScene" uid="uid://bky1hyaf4ph3p" path="res://objects/mailbox.tscn" id="38_b1qrp"]
+[ext_resource type="Script" uid="uid://cecj7g7df15af" path="res://ui/dialogue/base/dialogue_controller.gd" id="39_come4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4c57u"]
 sky_top_color = Color(0.06767365, 0.09052234, 0.12095586, 1)
@@ -111,7 +114,8 @@ visible = false
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1917848421 instance=ExtResource("2_0xm2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.246914, -0.4269855, -6.505537)
+unique_name_in_owner = true
+transform = Transform3D(-0.041752163, 0, 0.999128, 0, 1, 0, -0.999128, 0, -0.041752163, -28.246914, -0.4269855, 5.270566)
 
 [node name="Shaders" type="CanvasLayer" parent="." unique_id=563867572]
 layer = 0
@@ -322,6 +326,15 @@ transform = Transform3D(-100.000015, 8.742278e-06, 3.8213708e-13, 0, -4.371139e-
 [node name="Irva" parent="GasStationContainer" unique_id=1151389277 instance=ExtResource("23_facbu")]
 transform = Transform3D(-0.017258089, 0, 1.4999008, 0, 1.5, 0, -1.4999008, 0, -0.017258089, -35.921333, -0.49811494, 5.5848656)
 
+[node name="IrvaDialogueTrigger" parent="GasStationContainer/Irva" unique_id=2072096513 node_paths=PackedStringArray("trigger_camera") instance=ExtResource("24_b1qrp")]
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, 0, 0)
+dialogue = ExtResource("25_h8e4i")
+trigger_camera = NodePath("../IrvaCamera3D")
+
+[node name="IrvaCamera3D" type="Camera3D" parent="GasStationContainer/Irva" unique_id=355771865]
+transform = Transform3D(0.66666675, 0, 1.8626451e-09, 0, 0.6666667, 0, -9.313226e-10, 0, 0.66666675, -0.009986639, 1.6365607, 0.8679371)
+fov = 90.0
+
 [node name="Cars" type="Node3D" parent="." unique_id=914186888]
 
 [node name="WhiteVan" parent="Cars" unique_id=1467551361 instance=ExtResource("11_efxa6")]
@@ -366,7 +379,7 @@ transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -17.
 transform = Transform3D(-3.496911e-09, 0.08, 3.496911e-09, 0, -3.496911e-09, 0.08, 0.08, 3.496911e-09, 1.5285484e-16, 31.97414, -0.2838111, -232.26408)
 
 [node name="Church" parent="TownContainer" unique_id=682683523 instance=ExtResource("25_0odxb")]
-transform = Transform3D(350, 0, 0, 0, -1.5298985e-05, 350, 0, -350, -1.5298985e-05, -34.20401, -0.28316438, -265.85574)
+transform = Transform3D(-1.5298985e-05, 350, 1.5298985e-05, 0, -1.5298985e-05, 350, 350, 1.5298985e-05, 6.687399e-13, -54.725735, -0.28316438, -272.92822)
 
 [node name="FlickeringOmniLight" parent="TownContainer/Church" unique_id=1901709245 instance=ExtResource("27_a6jrf")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.016085707, -0.0059974194, 0.047999047)
@@ -398,9 +411,6 @@ transform = Transform3D(2.5, 0, 0, 0, -1.09278474e-07, 2.5, 0, -2.5, -1.09278474
 [node name="AbandonedHouse" parent="." unique_id=2139957799 instance=ExtResource("33_jq2sk")]
 transform = Transform3D(35, 0, 0, 0, -1.5298986e-06, 35, 0, -35, -1.5298986e-06, -19.9239, -0.9176381, -236.94519)
 
-[node name="Cube_1kg" parent="." unique_id=708902512 instance=ExtResource("33_4k2k6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5982995, 9.536743e-07, -251.57626)
-
 [node name="FogVolume" type="FogVolume" parent="." unique_id=1447150015]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.822781, 26.163044, 69.18168)
 size = Vector3(189.04892, 53.278748, 30.221985)
@@ -408,3 +418,15 @@ material = SubResource("FogMaterial_aqe1g")
 
 [node name="Flashlight" parent="." unique_id=2144295958 instance=ExtResource("35_0rl1p")]
 transform = Transform3D(0.76529056, 0, -0.643685, 0, 1, 0, 0.643685, 0, 0.76529056, -7.284547, -0.21700525, -44.678234)
+
+[node name="MailPost" parent="." unique_id=1779138575 instance=ExtResource("38_b1qrp")]
+transform = Transform3D(100, 0, 0, 0, -4.3711384e-06, 99.99999, 0, -99.99999, -4.3711384e-06, 22.617874, -1.3066877, -253.96678)
+
+[node name="MailPost2" parent="." unique_id=1222429237 instance=ExtResource("38_b1qrp")]
+transform = Transform3D(-1.7429879e-06, -39.874912, 91.70602, 100.000015, -4.3711393e-06, 0, 4.0085974e-06, 91.70602, 39.874912, 27.618155, -0.28040063, -243.23811)
+
+[node name="DialogueController" type="Node" parent="." unique_id=1961531641]
+script = ExtResource("39_come4")
+
+[connection signal="body_entered" from="GasStationContainer/Irva/IrvaDialogueTrigger" to="DialogueController" method="_on_dialogue_trigger_body_entered"]
+[connection signal="dialogue_triggered" from="GasStationContainer/Irva/IrvaDialogueTrigger" to="DialogueController" method="_on_trigger_dialogue_triggered"]
